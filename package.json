@@ -1,0 +1,21 @@
+{
+  "scripts": {
+    "docs:dev": "vitepress dev --port 5200 --host 0.0.0.0",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
+  },
+  "type": "module",
+  "devDependencies": {
+    "flexsearch": "^0.7.31",
+    "markdown-it": "^13.0.1"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.1.0",
+    "ace-builds": "^1.16.0",
+    "element-plus": "^2.3.2",
+    "everright-formeditor": "1.0.0-beta.10",
+    "lodash-es": "^4.17.21",
+    "vant": "^4.1.2",
+    "vitepress": "1.0.0-alpha.64"
+  }
+}
