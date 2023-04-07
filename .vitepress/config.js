@@ -163,8 +163,7 @@ export default defineConfig({
                 link: 'zh-cn/module/formEditor/doc'
               }
             ]
-          },
-          { text: 'Examples', link: '/markdown-examples' }
+          }
         ],
         sidebar: renderSidebar('zh-cn')
       }

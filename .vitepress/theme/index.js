@@ -1,15 +1,21 @@
 import DefaultTheme from 'vitepress/theme'
 import ElementPlus from 'element-plus'
 import Vant from 'vant'
-import { reactive } from 'vue'
+import { reactive, watch } from 'vue'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 import 'element-plus/dist/index.css'
 import 'vant/lib/index.css'
 import MyLayout from './MyLayout.vue'
-
+import { useRoute, useRouter, useData } from 'vitepress'
 export default {
   ...DefaultTheme,
   setup () {
+    if (!import.meta.env.SSR) {
+      const { lang } = useData()
+      watch(lang, () => {
+        localStorage.setItem('er-lang', lang.value)
+      })
+    }
   },
   enhanceApp(ctx) {
     ctx.app.provide('ER', reactive({

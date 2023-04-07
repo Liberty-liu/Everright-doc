@@ -10,20 +10,11 @@ hero:
     alt: VitePress
   actions:
     - theme: brand
-      text: Markdown Examples
+      text: Get Started
       link: /markdown-examples
     - theme: alt
-      text: API Examples
-      link: /api-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: Editor demo
+      link: http://localhost:5200/demo/editor.html
 
 features:
   - title: 灵活的拖放功能
@@ -36,3 +27,10 @@ features:
     details: 内置两种模式：字段与布局不分离、字段与布局分离。
 ---
 
+
+<script setup>
+import { useData, useRoute, useRouter } from 'vitepress'
+const {
+  lang
+} = useData()
+</script>
