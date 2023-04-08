@@ -1,5 +1,9 @@
 ---
 layout: false
+head:
+- - meta
+  - name: viewport
+    content: width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover
 ---
 <script setup>
 import { ElMessage } from 'element-plus'
@@ -36,10 +40,11 @@ const load = async () => {
   if (query.layoutType) {
     layoutType.value = Number(query.layoutType)
   }
+  console.log(query.lang)
+  lang.value = query.lang || 'zh-cn'
 }
 if (!import.meta.env.SSR) {
   load()
-  lang.value = localStorage.getItem('er-lang') || 'zh-cn'
 }
 const erFormPreview = customDefineClientComponent(async () => {
   const { erFormPreview } = await import('everright-formeditor')

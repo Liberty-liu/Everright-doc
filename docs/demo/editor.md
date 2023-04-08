@@ -35,6 +35,7 @@ const load = async () => {
   if (query.layoutType) {
     layoutType.value = Number(query.layoutType)
   }
+  lang.value = query.lang || 'zh-cn'
   ace = await import('ace-builds')
   const workerJsonUrl = await import('ace-builds/src-noconflict/worker-json?url')
   await import('ace-builds/src-noconflict/theme-chrome')
@@ -43,7 +44,7 @@ const load = async () => {
 }
 if (!import.meta.env.SSR) {
   load()
-  lang.value = localStorage.getItem('er-lang') || 'zh-cn'
+  // lang.value = localStorage.getItem('er-lang') || 'zh-cn'
 }
 let switchLayoutType = ''
 let aboutLayoutType = ''

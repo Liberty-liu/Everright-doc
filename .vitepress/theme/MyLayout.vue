@@ -203,7 +203,7 @@ const handleListener = async ({ type, data }) => {
                 layoutType1<br>
                 {{lang === 'en' ? 'Fields and layout not separated' : '字段与布局不分离'}}
               </p>
-              <a href="/demo/editor.html?layoutType=1&isEdit=1" target="_blank">Demo</a>
+              <a :href="`/demo/editor.html?layoutType=1&isEdit=1&lang=${lang}`" target="_blank">Demo</a>
             </el-card>
           </li>
           <li class="item">
@@ -214,7 +214,7 @@ const handleListener = async ({ type, data }) => {
                 layoutType2<br>
                 {{lang === 'en' ? 'Fields and layout separated' : '字段与布局分离'}}
               </p>
-              <a href="/demo/editor.html?layoutType=2&isEdit=1" target="_blank">Demo</a>
+              <a :href="`/demo/editor.html?layoutType=2&isEdit=1&lang=${lang}`" target="_blank">Demo</a>
             </el-card>
           </li>
           <li class="item">
@@ -225,7 +225,7 @@ const handleListener = async ({ type, data }) => {
                 layoutType1<br>
                 {{lang === 'en' ? 'Fields and layout not separated' : '字段与布局不分离'}}
               </p>
-              <a href="/demo/preview.html?layoutType=1" target="_blank">Demo</a>
+              <a :href="`/demo/preview.html?layoutType=1&lang=${lang}`" target="_blank">Demo</a>
             </el-card>
           </li>
           <li class="item">
@@ -235,7 +235,7 @@ const handleListener = async ({ type, data }) => {
               <p>
                 {{lang === 'en' ? 'Various properties for displaying and editing form fields are provided, including basic information, types, layouts, and so on.' : '用于展示和编辑表单字段的各种属性，包括基础信息、类型、布局等等。'}}
               </p>
-              <a href="/demo/formEditorConfig.html" target="_blank">Demo</a>
+              <a :href="`/demo/formEditorConfig.html?lang=${lang}`" target="_blank">Demo</a>
             </el-card>
           </li>
         </ul>

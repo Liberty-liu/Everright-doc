@@ -5,6 +5,7 @@ export default {
   methods: {
     handleCommand: (command) => {
       const urlObj = queryString.parseUrl(location.href)
+      urlObj.query.lang = urlObj.query.lang || 'zh-cn'
       let url = ''
       switch (command) {
         case 'Editor1':

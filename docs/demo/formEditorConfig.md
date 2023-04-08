@@ -33,8 +33,15 @@ const customDefineClientComponent = (loader, handle = [], fn) => {
     }
   }
 }
+const load = async () => {
+  const queryString = await import('query-string')
+  const query = queryString.default.parse(location.search)
+  console.log(query.lang)
+  lang.value = query.lang || 'zh-cn'
+}
 if (!import.meta.env.SSR) {
-  lang.value = localStorage.getItem('er-lang') || 'zh-cn'
+  load()
+  // lang.value = localStorage.getItem('er-lang') || 'zh-cn'
 }
 const erFormConfig = customDefineClientComponent(async () => {
   const ER = await import('everright-formeditor')
