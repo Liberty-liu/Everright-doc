@@ -1,11 +1,11 @@
 ---
 outline: deep
 ---
-# 字段校验
-校验主要应用于Input类型的表单元素，它可以确保用户输入的数据符合特定的规则和要求，例如最大字符数、最小字符数、URL格式、电子邮件格式、电话号码格式、身份证号格式等等。
+# Form Validation
+Validation is mainly applied to Input type form elements, which can ensure that the data entered by users meets specific rules and requirements, such as maximum character count, minimum character count, URL format, email format, phone number format, ID card format, and so on.
 
-除了Input类型的表单元素之外，其他类型的表单元素只进行必填项校验，以确保用户填写了必要的信息。例如，单选按钮、复选框和下拉菜单等表单元素通常只需要标记为必填项，并确保用户填写了相应的选项。
+In addition to Input type form elements, other types of form elements only undergo required field validation to ensure that users fill in necessary information.  For example, radio buttons, checkboxes, and dropdown menus typically only need to be marked as required and ensure that users fill in the corresponding options.
 
-在属性面板中，可以为这些类型的表单元素选择必填项选项，以确保用户不会在提交表单时漏填必要的信息。此外，您还可以为这些表单元素提供帮助文本和默认值，以提高用户体验和表单的易用性。
+In the attribute panel, you can select the required field option for these types of form elements to ensure that users do not omit necessary information when submitting the form.  Additionally, you can provide placeholder text and default values for these form elements to improve user experience and form usability.
 
-内置了中文和英文的校验文案
+Built-in Chinese and English validation messages are available.

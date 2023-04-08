@@ -3,36 +3,38 @@ layout: home
 
 hero:
   name: "Everright-formEditor"
-  text: "低代码可视化编辑器"
-  tagline: "开源的JavaScript低代码编辑器"
+  text: "Visual low-code editor"
+  tagline: "Open source javascript low-code editor"
   image:
     src: /Everright-logo.svg
     alt: VitePress
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: Get Started
+      link: /en/module/formEditor/started
     - theme: alt
-      text: API Examples
-      link: /api-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: Documentation
+      link: /en/module/formEditor/doc
 
 features:
-  - title: 灵活的拖放功能
-    details: 可以让用户轻松地生成行和列，并通过简单的拖放操作对它们进行布局和调整。无论是在设计表单还是创建页面，这个功能都能极大地提高用户的工作效率
-  - title: 提供多种组件
-    details: 编辑器、预览器和配置面板都可以单独使用，可以根据实际需求选择性单独使用配置面板，满足不同场景下的需求
-  - title: 跨平台适配
-    details: 依赖于element-plus和vant框架进行开发。内部提供了适配器进行参数转码，以达到最佳的体现。
-  - title: 字段与布局分离
-    details: 内置两种模式：字段与布局不分离、字段与布局分离。
+  - title: Flexible interaction
+    details: Users can easily generate rows and columns and layout them through simple drag-and-drop operations. This feature greatly improves user efficiency, whether in designing forms or creating pages.
+  - title: Providing multiple components
+    details: The editor, previewer, and configuration panel can all be used separately. The configuration panel can be selectively used according to actual needs, meeting the requirements of different scenarios.
+  - title: Support Pc and Mobile
+    details: The PC depends on element-plus while the mobile depends on vant. There is a set of adapters to convert parameters into ones that can be recognized by both element-plus and vant.
+  - title: Fields and layout separated
+    details: There are two built-in modes:Fields and layout not separated、Fields and layout separated.
+  - title: i18n
+    details: Built-in internationalization (Chinese and English)
+  - title: Real-time preview function
+    details: On the form editing page, a real-time preview function is provided, allowing users to view the rendering effect of the form at any time, so that they can adjust and optimize the form accordingly.
 ---
 
+
+<script setup>
+import { useData, useRoute, useRouter } from 'vitepress'
+const {
+  lang
+} = useData()
+</script>

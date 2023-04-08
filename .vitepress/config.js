@@ -54,11 +54,15 @@ const renderSidebar = (lang = 'zh-cn') => {
       collapsed: false,
       items: [
         {
+          text: isZh ? '安装' : 'Installation',
+          link: `/${lang}/module/formEditor/started`
+        },
+        {
           text: isZh ? '关于编辑器' : 'About the Editor',
           link: `/${lang}/module/formEditor/doc`
         },
         {
-          text: isZh ? '字段校验' : 'Validate',
+          text: isZh ? '表单校验' : 'Form Validation',
           link: `/${lang}/module/formEditor/validate`
         },
         {
@@ -115,10 +119,10 @@ const renderSidebar = (lang = 'zh-cn') => {
     ]
   })
   bars.push({
-    text: '开发',
+    text: isZh ? '开发' : 'Development',
     items: [
       {
-        text: '开发指南',
+        text: isZh ? '开发指南' : 'Development Guide',
         link: `/${lang}/module/formEditor/development`
       }
     ]
@@ -136,6 +140,7 @@ export default defineConfig({
   markdown: {
     lineNumbers: true,
   },
+  lastUpdated: true,
   head: [
     [
       'link',
@@ -163,15 +168,12 @@ export default defineConfig({
                 link: 'zh-cn/module/formEditor/doc'
               }
             ]
-          }
+          },
+          { text: 'About me', link: '/zh-cn/aboutme' },
         ],
         sidebar: renderSidebar('zh-cn')
       }
     },
-    // '/': {
-    //   lang: 'zh-cn',
-    //   label: '中文'
-    // },
     en: {
       label: 'English',
       lang: 'en',
@@ -184,15 +186,15 @@ export default defineConfig({
             items: [
               {
                 text: 'Introduction',
-                link: 'en/module/formEditor/index'
+                link: 'en/module/formEditor/introduction'
               },
               {
-                text: 'Doc',
-                link: 'en/module/formEditor/introduction'
+                text: 'Documentation',
+                link: 'en/module/formEditor/doc'
               }
             ]
           },
-          { text: 'Examples', link: '/markdown-examples' }
+          { text: 'About me', link: '/en/aboutme' },
         ],
         sidebar: renderSidebar('en')
       }

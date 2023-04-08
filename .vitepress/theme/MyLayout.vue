@@ -6,17 +6,20 @@ import { useRoute, useRouter, useData, defineClientComponent } from 'vitepress'
 const { Layout } = DefaultTheme
 const route = useRoute()
 const router = useRouter()
-const isRender = ref(false)
+const isRenderConfigPanel = ref(false)
+const isRenderDemo = ref(false)
 const fieldId = ref('')
 const ER = inject('ER')
 const {
   site,
-  theme
+  theme,
+  lang
 } = useData()
 const all = ref([])
 let erComponentsConfig = {}
 let erGeneratorData = ''
 let erUtils = ''
+const formEditorHomeRe = /(en|zh-cn)+(\/module\/formEditor\/introduction.html){1}/
 const findDataByurl = (path) => {
   let result = ''
   const {
@@ -104,9 +107,7 @@ const field = computed(() => {
   return result
 })
 const renderNavs = (fieldsConfig, erGeneratorData) => {
-  // console.log(fieldsConfig)
   let result = []
-  // const fields = [...fieldsConfig[0].list, ...fieldsConfig[1].list].map(e => _.lowerCase(erGeneratorData(e, false, 'en').label))
   const fields = [...fieldsConfig[0].list, ...fieldsConfig[1].list].map(e => {
     let label = ''
     if (e.type === 'input') {
@@ -141,23 +142,28 @@ const load = async () => {
   erComponentsConfig = everright.erComponentsConfig
   erGeneratorData = everright.erGeneratorData
   erUtils = everright.utils
-  watch(() => _.get(route, 'data.params.type', ''), (newVal) => {
+  // watch(() => _.get(route, 'data.params.type', ''), (newVal) => {
+  watch(route, (newVal) => {
     if (!import.meta.env.SSR) {
-      if (newVal) {
-        fieldId.value = newVal
+      if (_.get(newVal, 'data.params.type', false)) {
+        fieldId.value = _.get(newVal, 'data.params.type', false)
+        isRenderConfigPanel.value = true
         nextTick(() => {
           document.querySelector('.aside-container').style.width = '334px'
         })
       } else {
         document.querySelector('.aside-container') && document.querySelector('.aside-container').removeAttribute('style')
+        isRenderConfigPanel.value = false
       }
     }
-    isRender.value = !!newVal
   }, { immediate: true })
 }
 if (!import.meta.env.SSR) {
   load()
 }
+watch(route, (newVal) => {
+  isRenderDemo.value = formEditorHomeRe.test(newVal.path)
+}, { immediate: true })
 const erFormConfig = defineClientComponent(async () => {
   const {
     erFormConfig
@@ -175,7 +181,7 @@ const handleListener = async ({ type, data }) => {
 <template>
   <Layout>
     <template #aside-outline-after>
-      <div v-if="isRender">
+      <div v-if="isRenderConfigPanel">
         <div
           style="margin:0 10px;">
           <er-form-config
@@ -187,7 +193,7 @@ const handleListener = async ({ type, data }) => {
       </div>
     </template>
     <template #home-features-before>
-      <div class="demo">
+      <div :class="['demo', lang === 'en' && 'demo_en']" v-if="isRenderDemo">
         <ul class="container">
           <li class="item">
             <el-card shadow="never">
@@ -195,7 +201,7 @@ const handleListener = async ({ type, data }) => {
               <h3>Editor</h3>
               <p>
                 layoutType1<br>
-                字段与布局不分离
+                {{lang === 'en' ? 'Fields and layout not separated' : '字段与布局不分离'}}
               </p>
               <a href="/demo/editor.html?layoutType=1&isEdit=1" target="_blank">Demo</a>
             </el-card>
@@ -206,7 +212,7 @@ const handleListener = async ({ type, data }) => {
               <h3>Editor</h3>
               <p>
                 layoutType2<br>
-                字段与布局分离
+                {{lang === 'en' ? 'Fields and layout separated' : '字段与布局分离'}}
               </p>
               <a href="/demo/editor.html?layoutType=2&isEdit=1" target="_blank">Demo</a>
             </el-card>
@@ -217,7 +223,7 @@ const handleListener = async ({ type, data }) => {
               <h3>Preview</h3>
               <p>
                 layoutType1<br>
-                字段与布局不分离
+                {{lang === 'en' ? 'Fields and layout not separated' : '字段与布局不分离'}}
               </p>
               <a href="/demo/preview.html?layoutType=1" target="_blank">Demo</a>
             </el-card>
@@ -227,7 +233,7 @@ const handleListener = async ({ type, data }) => {
               <el-image fit="contain" :preview-src-list="['/img/configPanel.png']" style="width: 100%; height: 260px;" src="/img/configPanel.png"/>
               <h3>Config panel</h3>
               <p>
-                用于展示和编辑表单字段的各种属性，包括基础信息、类型、布局等等。
+                {{lang === 'en' ? 'Various properties for displaying and editing form fields are provided, including basic information, types, layouts, and so on.' : '用于展示和编辑表单字段的各种属性，包括基础信息、类型、布局等等。'}}
               </p>
               <a href="/demo/formEditorConfig.html" target="_blank">Demo</a>
             </el-card>
@@ -239,16 +245,23 @@ const handleListener = async ({ type, data }) => {
 </template>
 <style lang="scss" scoped>
 .demo {
-  margin: 0 auto;
-  max-width: 1152px;
+  &.demo_en {
+    ::v-deep .el-card {
+      height: 500px !important;
+    }
+  }
+  position: relative;
+  padding: 0 24px;
   .container {
     display: flex;
     flex-wrap: wrap;
     margin: -8px;
+    margin: 0 auto 40px;
+    max-width: 1152px;
   }
   .item {
     padding: 8px;
-    width: calc(100% / 4);
+    width: 100%;
     ::v-deep .el-card {
       height: 460px;
       border: 1px solid #dcdfe6;
@@ -298,6 +311,39 @@ const handleListener = async ({ type, data }) => {
           background: var(--vp-button-brand-bg);
         }
       }
+    }
+  }
+  @media (min-width: 640px) {
+    .demo {
+      padding: 0 48px;
+    }
+  }
+
+  @media (min-width: 960px) {
+    .demo {
+      padding: 0 64px;
+    }
+  }
+  @media (min-width: 640px) {
+    .item {
+      width: calc(100% / 2);
+    }
+  }
+
+  @media (min-width: 768px) {
+    .item {
+      width: calc(100% / 2);
+    }
+
+    //.item.grid-3,
+    //.item.grid-6 {
+    //  width: calc(100% / 3);
+    //}
+  }
+
+  @media (min-width: 960px) {
+    .item {
+      width: calc(100% / 4);
     }
   }
 }

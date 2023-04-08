@@ -3,18 +3,18 @@ outline: deep
 ---
 # erFormEditor
 
-Everright-formEditor内部抛出三个组件分别适应不同的业务场景，erFormEditor是表单编辑器组件。
+Everright-formEditor has three internal components that are suitable for different business scenarios. erFormEditor is the form editor component.
 ::: tip
-erFormEditor组件提供了两种模式进行对字段和布局结构的控制：layoutType：取值为1或2<br>
+erFormEditor component provides two modes for controlling the fields and layout structure：layoutType：1 or 2<br>
 :::
-## **1.布局和字段不分离**
+## **1.Fields and layout not separated**
 
-  在PC端设计表单,会自适应mobile端
+  When designing a form on the PC, it will automatically adapt to the mobile end.
 
-  **Everright-formEditor的拖拽交互是可以插入列和行的，在该模式下边在mobile端只能插入行**
+  **Everright-formEditor's default drag-and-drop interaction allows for inserting both columns and rows.  However, in this mode, on mobile, only rows can be inserted.**
 
 
-  **layoutType1数据结构:**
+  **layoutType1 data structure:**
 ::: details Click me to view the code
   ```json
 {
@@ -133,13 +133,13 @@ erFormEditor组件提供了两种模式进行对字段和布局结构的控制�
   ```
 :::
 
-## **2.布局和字段分离**
+## **2.Fields and layout separated**
 
-  在PC端设计表单时，例如将一个字段为email的字段放入到tabs容器中，切换到mobile端，不会同步tabs容器的，此时如果在mobile新建一个Collapse容器，将email字段放入其中，切换到pc端，是不会同步Collapse容器的，对于在一端新增的字段，切换到另一端，会进行两个集合运算，新增的字段会push到画板底部，删除的字段会在布局结构体中删除掉。字段自身的所有属性是同步的。
+  When designing a form on a PC, for example, if a field with the type "email" is placed in a tabs container, switching to mobile mode will not synchronize the tabs container.  If a new Collapse container is created on mobile and the email field is placed inside it, switching back to PC mode will not synchronize the Collapse container.  When a new field is added in one mode and then the mode is switched, a collection operation is performed where the new field is pushed to the bottom of the canvas, and any deleted fields are removed from the layout structure.  All properties of the fields are synchronized.
 
-  **该模式下的拖拽交互PC、mobile是相同的。**
+  **The drag-and-drop interaction in this mode is the same for both PC and mobile**
 
-**layoutType2数据结构:**
+**layoutType2 data structure:**
 ::: details Click me to view the code
   ```json
 {
@@ -266,42 +266,42 @@ erFormEditor组件提供了两种模式进行对字段和布局结构的控制�
 ## **3.API**
 
 ### **Attributes**
-| 名称        |      类型      |  说明 | 可选值 |  默认值 |
+| Name        |      Type      |  Description | Accepted Values |  Default |
 | :---- | :-- | :---- | :---- | :--------- |
-| `fieldsConfig`      | Array | 定义字段面板| - | [(默认值)](https://github.com/Liberty-liu/Everright-formEditor/blob/main/packages/formEditor/componentsConfig.js) |
-| `globalConfig`      | Object | 定义表单配置 | - |[(默认值)](https://github.com/Liberty-liu/Everright-formEditor/blob/main/packages/formEditor/componentsConfig.js) |
+| `fieldsConfig`      | Array | Definition panel of fields| - | [(Default)](https://github.com/Liberty-liu/Everright-formEditor/blob/main/packages/formEditor/componentsConfig.js) |
+| `globalConfig`      | Object | Defining Form Configuration | - |[(Default)](https://github.com/Liberty-liu/Everright-formEditor/blob/main/packages/formEditor/componentsConfig.js) |
 | `lang` | String  | i18n | zh-cn\|en | zh-cn |
-| `layoutType` | Number  | 定义字段与布局是否分离 | 1\|2 | 1 |
-| `fileUploadURI` | String  | 图片、文件上传接口 | - | - |
-| `fieldsPanelWidth` | String  | 定义字段面板的宽度 | - | 220px |
-| `fieldsPanelDefaultOpeneds` | Array  | 字段面板默认展开 | - | <ClientOnly><el-tooltip content="['defaultField', 'field', 'container']" placement="bottom" effect="light"><el-button link><el-icon><Warning /></el-icon></el-button></el-tooltip></ClientOnly> |
-| `configPanelWidth` | String  | 定义属性面板的宽度 | - | 320px |
-| `isShowCompleteButton` | Boolean  | 是否在表单配置显示提交按钮配置选项 | true\|false  | true |
-| `checkPropsBySelected` | function (selected, propType) {}  | 是否显示config面板的属性 | - | - |
-| `quickImages` | Array  | 定义设置背景图片的快捷选项 | <ClientOnly><el-tooltip content="['/public/Everright-logo.svg','/public/Everright-logo.svg','/public/Everright-logo.svg']" placement="bottom" effect="light"><el-button link><el-icon><Warning /></el-icon></el-button></el-tooltip></ClientOnly> | [] |
-| `quickImageLimit` | Number  | 上传图片最多在快捷面板显示个数 | - | 5 |
-| `quickColors` |  Array | 定义设置背景颜色的快捷选项 | - | <ClientOnly><el-tooltip content="['/public/Everright-logo.svg','/public/Everright-logo.svg','/public/Everright-logo.svg']" placement="bottom" effect="light"><el-button link><el-icon><Warning /></el-icon></el-button></el-tooltip></ClientOnly> |
-| `delHandle` | function (selected) {} return false会拦截此次操作  | 删除拦截函数 | - |- |
-| `copyHandle` | function (selected) {} return false会拦截此次操作  | 复制拦截函数 | - |- |
-| `inlineMax` | Number  | 每行最多可放入个数 | - | 4 |
-| `isShowClear` | Boolean  | 是否显示清空按钮 | true\|false | true |
-| `isShowI18n` | Boolean  | 是否显示i18n按钮 | true\|false | true |
+| `layoutType` | Number  | Defining whether fields and layouts are separate | 1\|2 | 1 |
+| `fileUploadURI` | String  | Image and file upload URL | - | - |
+| `fieldsPanelWidth` | String  | Define the width of the `fieldsPanel`. | - | 220px |
+| `fieldsPanelDefaultOpeneds` | Array  | array that contains indexes of currently active sub-menus | - | <ClientOnly><el-tooltip content="['defaultField', 'field', 'container']" placement="bottom" effect="light"><el-button link><el-icon><Warning /></el-icon></el-button></el-tooltip></ClientOnly> |
+| `configPanelWidth` | String  | Define the width of the `configPanel` | - | 320px |
+| `isShowCompleteButton` | Boolean  | Whether to display the option to configure the submit button in the form settings. | true\|false  | true |
+| `checkPropsBySelected` | function (selected, propType) {}  | Define which properties to display in the config panel | - | - |
+| `quickImages` | Array  | Define quick options for setting background images | <ClientOnly><el-tooltip content="['/public/Everright-logo.svg','/public/Everright-logo.svg','/public/Everright-logo.svg']" placement="bottom" effect="light"><el-button link><el-icon><Warning /></el-icon></el-button></el-tooltip></ClientOnly> | [] |
+| `quickImageLimit` | Number  | The maximum number of uploaded images displayed in the shortcut panel | - | 5 |
+| `quickColors` |  Array | Defining shortcut options for setting background color | - | <ClientOnly><el-tooltip content="['/public/Everright-logo.svg','/public/Everright-logo.svg','/public/Everright-logo.svg']" placement="bottom" effect="light"><el-button link><el-icon><Warning /></el-icon></el-button></el-tooltip></ClientOnly> |
+| `delHandle` | function (selected) {} return false  | Deletion interception function | - |- |
+| `copyHandle` | function (selected) {} return false  | Copy interception function | - |- |
+| `inlineMax` | Number  | Maximum number of items per row | - | 4 |
+| `isShowClear` | Boolean  | Whether to display the clear button | true\|false | true |
+| `isShowI18n` | Boolean  | Whether to display the i18n button | true\|false | true |
 
 ### **Slots**
-| 名称  |      说明      | 
+| Name  |      Description      | 
 | :---- | :-- | 
-| operation-left | 操作区域左侧部分 | 
-| operation-right | 操作区域右侧部分 | 
+| operation-left | The left side of the operation area | 
+| operation-right | The right side of the operation area | 
 
 ### **Event**
-| 事件名称  |      说明      | 
+| Name  |      Description      | 
 | :---- | :-- | 
-| listener | 编辑器内部所有事件都通过该事件发送，根据type区分 | 
+| listener | All events within the editor are sent through this event, differentiated by type | 
 
 type:
 - **changeParams**
 
-  selection的数据发生变动
+  Selection data has changed
 
 - **lang**
 
@@ -310,12 +310,12 @@ type:
 
 - **save**
 
-  操作区域保存按钮
+  Save button in the operation area
 
 ### **Exposes**
 
-| 名称  | 说明| 参数|
+| Name  | Description| Parameters|
 | :---- | :-- | :-- |
-| switchPlatform | 设置pc/mobile | pc\|mobile | 
-| getData | 获取数据，内部会校验用户填写的ID是否唯一 | - | 
-| setData | 设置数据 | - | 
+| switchPlatform | Set pc/mobile | pc\|mobile | 
+| getData | Get data, with internal validation for unique IDs entered by user. | - | 
+| setData | Set data | - | 

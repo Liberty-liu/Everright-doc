@@ -1,28 +1,9 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
-layout: home
-
-hero:
-  name: "Everright"
-  text: "A VitePress Site"
-  tagline: My great project tagline
-  image:
-    src: /Everright-logo.svg
-    alt: VitePress
-  actions:
-    - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
-
-features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+layout: page
 ---
+Work in Progress…
 
+- I have a dog named Handsome and he is super cute.
+- 我的狗子名字叫帅哥，看他帅吗，嘿哈.
+
+<el-image style="width: 100%;" src="/img/mydog.JPG"/>

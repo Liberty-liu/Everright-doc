@@ -1,7 +1,7 @@
 ---
 outline: deep
 ---
-# erFormConfig
+# erFormPreview
 
 Everright-formEditor内部抛出三个组件分别适应不同的业务场景，erFormPreview是用于预览和录入表单数据的组件
 - 根据当前页面判断当前处于PC端还是移动端，并展示对应的表单预览页面。

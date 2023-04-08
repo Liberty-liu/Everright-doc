@@ -1,40 +1,39 @@
 ---
 outline: deep
 ---
-# 关于编辑器
+# About the editor
 
-## 编辑器的组成区域
+## The constituent region of the editor
 ![An image](/img/abouteditor.png)
-### 1.字段面板(Fields panel)
-字段面板提供两种方式添加字段：点击（表单画板会自动滚动到最底部）和拖拽（生成行或列），将一个字段添加到画板中后，它会被自动选中，配置面板会显示该字段的所有属性，并且可以轻松地更改这些属性，例如字段名称、字段类型、选项等。此外，还可以在属性面板中设置该字段的验证规则、默认值和布局等其他属性。
+### 1.Fields panel
+The field panel provides two ways to add fields: clicking (the form canvas will automatically scroll to the bottom) and dragging (to generate a row or column).  Once a field is added to the canvas, it will be automatically selected, and the configuration panel will display all the properties of the field, allowing users to easily change these properties, such as field name, field type, options, etc.  Additionally, other properties, such as validation rules, default values, and layouts, can also be set for the field in the properties panel.
 
 
 ![An image](/img/fieldsPanel.png)
-### 2.表单画板(canvas panel)
-表单画板是Everright-formEditor的主要工作区域，提供了一种直观的方式来构建和设计表单，在表单画板中，可以使用拖放和单击等交互式操作，轻松地添加、删除和移动表单字段
+### 2.Form canvas
+The form canvas is the main workspace of Everright-formEditor and provides an intuitive way to build and design forms. In the form canvas, interactive operations such as drag-and-drop and click can be used to easily add, delete, and move form fields.
 
 ![An image](/img/canvasPanel.png)
 
-### 3.属性面板(config panel)
-用于配置字段属性的区域。当添加或选择表单中的一个字段时，该字段的属性将在属性面板中显示，以便能够轻松地更改和配置这些属性。包括常规选项（例如字段名称、字段类型、必填性等）、验证选项（例如最小值、最大值）和布局选项（例如字段宽度、标签位置、外边距等）。
-通过属性面板，能够快速设置和更改字段的各种属性。
+### 3.properties panel
+The configuration area for field properties is a region used to adjust the properties of a field.  When a field is added or selected in a form, its properties are displayed in the properties panel, allowing users to easily modify and configure these properties.  This includes general options (such as field name, field type, required), validation options (such as minimum and maximum values), and layout options (such as field width, label position, margin).  Using the properties panel, users can quickly set and change various properties of fields.
 
 ![An image](/img/configPanel.png)
 
-### 4.面包屑
-目前没有将树形结构体现出来，但是可以使用面包屑来定位当前字段的位置，并选择其父级。通过单击面包屑中的父级字段，可以选择整个块或分组，以查看其属性并对其进行更改。
+### 4.Breadcrumb
+Although the tree structure is not currently displayed, users can use breadcrumbs to locate the current field and select its parent.  By clicking on the parent field in the breadcrumbs, users can select the entire block or group to view its properties and make changes.
 
 ![An image](/img/breadcrumb.png)
 
-### 5.选区(selection)
-选区是Everright-formEditor中非常重要的一个概念，当选中字段时，会在画布面板上被高亮显示。
+### 5.Selection
+Selection is a very important concept in Everright-formEditor. When a field is selected, it is highlighted on the canvas panel.
 
-选区提供了以下功能：
+Selection provides the following features:
 
-移动、复制、删除、调整大小、选择父级、组合和拆分(在table容器中，会有插入行/列或合并行/列以及拆分行列)
+Move, copy, delete, resize, select parent, group, and ungroup (in a table container, there are also insert row/column or merge cells and split cells).
 
 
 ![An image](/img/selection.png)
 
-### 6.操作区域
-操作区域提供一些常见的功能按钮，包括清空、保存、预览和多语言等按钮，也可以传入slot
+### 6.Operation area
+The operation area provides some common function buttons, including clear, save, preview, and multilingual buttons. It can also accept slots for custom buttons or additional functionalities.

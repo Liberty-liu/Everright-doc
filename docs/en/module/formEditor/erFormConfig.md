@@ -3,12 +3,12 @@ outline: deep
 ---
 # erFormConfig
 
-Everright-formEditor内部抛出三个组件分别适应不同的业务场景，erFormConfig属性面板可以单独使用，例如需要直接新增或编辑字段属性时，可以使用erFormConfig属性面板来进行操作。这样可以方便地进行单独的字段属性编辑，而无需进入整个表单编辑器。
+Everright-formEditor has three internal components that are suitable for different business scenarios. The erFormConfig property panel can be used separately, for example, when it is necessary to directly add or edit field properties, the erFormConfig property panel can be used for operation. This makes it easy to edit individual field properties without entering the entire form editor.
 
-- 新增字段场景:
-  erGeneratorData(field, true, lang)生成所要创建的数据
-- 编辑字段场景:
-  传入field
+- Add field scene:
+  erGeneratorData(field, true, lang)Generate the data to be created.
+- Edit field scene:
+  Passing in the field
 
 ## **Example**
 
@@ -127,19 +127,19 @@ Everright-formEditor内部抛出三个组件分别适应不同的业务场景，
 ## **API**
 
 ### **Attributes**
-| 名称        |      类型      |  说明 | 可选值 |  默认值 |  必填 |
+| Name        |      Type      |  Description | Accepted Values |  Default |  Required |
 | :---- | :-- | :---- | :---- | :--------- | :--------- |
 | `lang` | String  | i18n | zh-cn\|en | zh-cn | - |
-| `fileUploadURI` | String  | 图片、文件上传接口 | - | - | - |
-| `isShowCompleteButton` | Boolean  | 是否在表单配置显示提交按钮配置选项 | true\|false  | true | - |
-| `field` | Object  | 配置字段数据 | -  | - | true |
+| `fileUploadURI` | String  | Image and file upload URL | - | - | - |
+| `isShowCompleteButton` | Boolean  | Whether to display the option to configure the submit button in the form settings | true\|false  | true | - |
+| `field` | Object  | Configuration field data | -  | - | true |
 
 ### **Event**
-| 事件名称  |      说明      |
+| Name  |      Description      |
 | :---- | :-- |
-| listener | 编辑器内部所有事件都通过该事件发送，根据type区分 |
+| listener | All events within the editor are sent through this event, differentiated by type |
 
 type:
 - **changeParams**
 
-  数据变动事件
+  Selection data has changed

@@ -3,8 +3,8 @@ outline: deep
 ---
 # erGeneratorData
 
-[erGeneratorData](https://github.com/Liberty-liu/Everright-formEditor/blob/main/packages/formEditor/generatorData.js)方法是一个辅助方法，用于生成表单字段的数据结构。它接受三个参数：
+[erGeneratorData](https://github.com/Liberty-liu/Everright-formEditor/blob/main/packages/formEditor/generatorData.js)is a helper method used to generate the data structure for form fields. It takes three parameters：
 
-1. **field:** 字段对象，包含字段的各种属性和配置信息。
-2. **isWrap:** 一个布尔值，是否需要包裹一个inline容器。
-3. **lang:** zh-cn|en,根据传入的语言环境生成对应的文本信息。
+1. **field:** Field data, including various properties and configuration information of the field。
+2. **isWrap:** A boolean value indicating whether to wrap the field inside an inline container
+3. **lang:** zh-cn|en,Generate corresponding text information based on the language environment passed in。

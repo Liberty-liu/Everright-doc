@@ -1,44 +1,37 @@
 ---
 outline: deep
 ---
-# erFormConfig
+# erFormPreview
 
-Everright-formEditor内部抛出三个组件分别适应不同的业务场景，erFormPreview是用于预览和录入表单数据的组件
-- 根据当前页面判断当前处于PC端还是移动端，并展示对应的表单预览页面。
-- 根据当前语言环境（如中文或英文）来展示对应语言环境下的校验文案。
+Everright-formEditor has three internal components that are suitable for different business scenarios. erFormPreview is a component used for previewing and inputting form data.
+- Display the corresponding form preview page based on whether the current page is on PC or mobile.
+- Display validation messages in the corresponding language environment based on the current language setting (e.g. Chinese or English).
 
 ## **API**
 
 ### **Attributes**
-| 名称        |      类型      |  说明 | 可选值 |  默认值 |
+| Name        |      Type      |  Description | Accepted Values |  Default |
 | :---- | :-- | :---- | :---- | :--------- |
 | `lang` | String  | i18n | zh-cn\|en | zh-cn |
-| `layoutType` | Number  | 定义字段与布局是否分离 | 1\|2 | 1 |
-| `fileUploadURI` | String  | 图片、文件上传接口 | - | - |
-| `isShowCompleteButton` | Boolean  | 是否在表单配置显示提交按钮配置选项 | true\|false  | true |
+| `layoutType` | Number  | Defining whether fields and layouts are separate | 1\|2 | 1 |
+| `fileUploadURI` | String  | Image and file upload URL | - | - |
+| `isShowCompleteButton` | Boolean  | Whether to display the option to configure the submit button in the form settings. | true\|false  | true |
 
 ### **Event**
-| 事件名称  |      说明      |
+| Name  |      Description      |
 | :---- | :-- |
-| listener | 编辑器内部所有事件都通过该事件发送，根据type区分 | 
+| listener | All events within the editor are sent through this event, differentiated by type | 
 
 type:
 - **submit**
 
-  `isShowCompleteButton=true`用户提交数据事件
+  `isShowCompleteButton=true`User data submission event
 
 ### **Exposes**
 
-| 名称  | 说明| 参数|
+| Name  | Description| Parameters|
 | :---- | :-- | :-- |
-| switchPlatform | 设置pc/mobile | pc\|mobile |
-| getData | 获取数据，内部会校验用户填写的ID是否唯一 | - |
-| setData | 设置数据,如果设置value，value的数据会回显到data的每一个字段 | (data, value?) => {} | 
+| switchPlatform | Set pc/mobile | pc\|mobile |
+| getData | Get data, with internal validation for unique IDs entered by user. | - |
+| setData | Setting data. If the value is set, the value data will be echoed to each field in the data | (data, value?) => {} | 
 
-- **setData**
-
-  用于设置表单渲染所需的数据结构和回显数据。
-
-  `data`: 用于渲染表单的数据结构，包括表单布局和表单控件信息等
-
-  `value`: 用于回显表单数据的对象，包括每个表单控件的值。

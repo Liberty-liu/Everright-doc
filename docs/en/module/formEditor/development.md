@@ -1,37 +1,36 @@
 ---
 outline: deep
 ---
-# 开发指南
+# Development Guide
 
-## 环境要求
-在开始开发之前，请确保开发环境满足以下要求：
+## Prerequisites
 
 - Node.js >= 16
 - pnpm >= 7.9.5
 
-## 安装依赖
+## Install dependencies
 ```shell
 pnpm install
 ```
 
-## 初始化项目
-进行开发之前，需要先了解一下本地环境不是一个纯前端的项目，会有一些简单的curd，需要执行shell预先创建一个sqlite的本地数据库文件和上传文件的文件夹
+## init
+Before starting the development, you need to understand that the local environment is not a pure frontend project. There will be some simple CRUD operations that require executing shell to pre-create a SQLite local database file and a folder for uploading files.
 ```shell
 pnpm run init
 ```
 
-## 运行项目
+## Run
 ```shell
 pnpm run dev
 ```
 
-## 运行server项目
+## Run server
 ```shell
 pnpm run dev:server
 ```
 
 
-## 构建项目
+## Build
 ```shell
 pnpm run build
 ```
