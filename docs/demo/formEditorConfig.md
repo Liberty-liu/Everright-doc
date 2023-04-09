@@ -2,7 +2,7 @@
 layout: false
 ---
 <script setup>
-import { ElMessage } from 'element-plus'
+import { ElMessage, ElLoading } from 'element-plus'
 import { ref, onMounted, shallowRef, nextTick, h, reactive, computed } from 'vue'
 import _ from 'lodash-es'
 const lang = ref('zh-cn')
@@ -12,6 +12,10 @@ const fieldData = ref({})
 const store = reactive({
   fields: [],
   layouts: []
+})
+const loading = ElLoading.service({
+  lock: true,
+  text: 'Loading'
 })
 const all = ref([])
 const value0 = ref('root')
@@ -71,6 +75,7 @@ const erFormConfig = customDefineClientComponent(async () => {
   { ref: EReditorRef }
 ], () => {
   nextTick(() => {
+    loading.close()
     // EReditorRef.value.setData(erData)
   })
 })

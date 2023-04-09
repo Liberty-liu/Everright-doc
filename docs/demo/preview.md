@@ -6,7 +6,7 @@ head:
     content: width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover
 ---
 <script setup>
-import { ElMessage } from 'element-plus'
+import { ElMessage, ElLoading } from 'element-plus'
 import { useData, useRoute, useRouter } from 'vitepress'
 import { ref, onMounted, shallowRef, nextTick, h } from 'vue'
 const lang = ref('zh-cn')
@@ -18,6 +18,10 @@ let aceEditor = ''
 const EReditorRef = ref(null)
 let erData = {}
 let query = {}
+const loading = ElLoading.service({
+  lock: true,
+  text: 'Loading'
+})
 const customDefineClientComponent = (loader, handle = [], fn) => {
   return {
     setup() {
@@ -53,6 +57,7 @@ const erFormPreview = customDefineClientComponent(async () => {
 ], () => {
   nextTick(() => {
     EReditorRef.value.setData(erData)
+    loading.close()
   })
 })
 const handleListener = async ({ type, data }) => {

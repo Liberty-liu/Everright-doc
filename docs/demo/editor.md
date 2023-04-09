@@ -4,15 +4,21 @@ layout: false
 <script setup>
 import { useData, useRoute, useRouter } from 'vitepress'
 import { ref, onMounted, shallowRef, nextTick, h, resolveComponent } from 'vue'
+import { ElLoading } from 'element-plus'
 const lang = ref('zh-cn')
 const content = ref('')
 const dialogVisible = ref(false)
 const layoutType = ref(1)
 let ace = '' 
 let aceEditor = '' 
+let isEmpty = '' 
 const EReditorRef = ref(null)
 let erData = {}
 let query = {}
+const loading = ElLoading.service({
+  lock: true,
+  text: 'Loading'
+})
 const customDefineClientComponent = (loader, handle = [], fn) => {
   return {
     setup() {
@@ -29,7 +35,26 @@ const customDefineClientComponent = (loader, handle = [], fn) => {
     }
   }
 }
-const load = async () => {
+let switchLayoutType = ''
+let aboutLayoutType = ''
+const handleClick = () => {
+  const data = EReditorRef.value.getData()
+  if (isEmpty.default(data)) {
+    return false
+  }
+  dialogVisible.value = true
+  nextTick(() => {
+    if (!aceEditor) {
+      aceEditor = ace.edit("aceEditor", {
+        mode: 'ace/mode/json',
+        theme: 'ace/theme/chrome'
+      })
+    }
+    aceEditor.setReadOnly(true)
+    aceEditor.setValue(JSON.stringify(data, '', 2))
+  })
+}
+const erFormEditor = customDefineClientComponent(async () => {
   const queryString = await import('query-string')
   query = queryString.default.parse(location.search)
   if (query.layoutType) {
@@ -37,18 +62,12 @@ const load = async () => {
   }
   lang.value = query.lang || 'zh-cn'
   ace = await import('ace-builds')
+  isEmpty = await import('lodash-es/isEmpty.js')
   const workerJsonUrl = await import('ace-builds/src-noconflict/worker-json?url')
+  await import('ace-builds/src-noconflict/ext-searchbox')
   await import('ace-builds/src-noconflict/theme-chrome')
   await import('ace-builds/src-noconflict/mode-json')
   ace.config.setModuleUrl('ace/mode/json_worker', workerJsonUrl.default)
-}
-if (!import.meta.env.SSR) {
-  load()
-  // lang.value = localStorage.getItem('er-lang') || 'zh-cn'
-}
-let switchLayoutType = ''
-let aboutLayoutType = ''
-const erFormEditor = customDefineClientComponent(async () => {
   const { erFormEditor } = await import('everright-formeditor')
   switchLayoutType = await import('./switchLayoutType.vue')
   aboutLayoutType = await import('./aboutLayoutType.vue')
@@ -61,12 +80,13 @@ const erFormEditor = customDefineClientComponent(async () => {
 }, [
   { ref: EReditorRef },
   {
-    // 'operation-left': () => [h(switchLayoutType.default), h('span', { class: 'layoutType' }, `layoutType: ${layoutType.value}`)]
-    'operation-left': () => [h(switchLayoutType.default), h(aboutLayoutType.default, () => h('span', { class: 'layoutType' }, `layoutType: ${layoutType.value}`))]
+    'operation-left': () => [h(switchLayoutType.default), h(aboutLayoutType.default, () => h('span', { class: 'layoutType' }, `layoutType: ${layoutType.value}`))],
+    'operation-right': () => [h('div', { class: 'generateJson', onClick: handleClick }, 'Generate json')]
   }
 ], () => {
   nextTick(() => {
     EReditorRef.value.setData(erData)
+    loading.close()
   })
 })
 const handleListener = async ({ type, data }) => {
@@ -75,17 +95,17 @@ const handleListener = async ({ type, data }) => {
       lang.value = data
       break
     case 'save':
-      dialogVisible.value = true
-      nextTick(() => {
-        if (!aceEditor) {
-          aceEditor = ace.edit("aceEditor", {
-            mode: 'ace/mode/json',
-            theme: 'ace/theme/chrome'
-          })
-        }
-        aceEditor.setReadOnly(true)
-        aceEditor.setValue(JSON.stringify(data, '', 2))
-      })
+      // dialogVisible.value = true
+      // nextTick(() => {
+      //   if (!aceEditor) {
+      //     aceEditor = ace.edit("aceEditor", {
+      //       mode: 'ace/mode/json',
+      //       theme: 'ace/theme/chrome'
+      //     })
+      //   }
+      //   aceEditor.setReadOnly(true)
+      //   aceEditor.setValue(JSON.stringify(data, '', 2))
+      // })
       break
   }
 }
@@ -123,7 +143,15 @@ const handleListener = async ({ type, data }) => {
   padding-left: 10px; 
   color: red;
 }
-.Everright-formEditor-Main__operation>div:first-child>* {
+.Everright-formEditor-Main__operation>div:first-child>*,.generateJson {
   display: inline-flex;
+}
+.generateJson {
+  cursor:pointer;
+  margin-right: 10px;
+  color: var(--el-color-primary);
+  &:hover {
+    color: var(--el-color-primary-light-5);
+  }
 }
 </style>
