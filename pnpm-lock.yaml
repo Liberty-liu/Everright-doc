@@ -4,7 +4,7 @@ specifiers:
   '@element-plus/icons-vue': ^2.1.0
   ace-builds: ^1.16.0
   element-plus: ^2.3.2
-  everright-formeditor: 1.0.1
+  everright-formeditor: 1.0.2
   flexsearch: ^0.7.31
   lodash-es: ^4.17.21
   markdown-it: ^13.0.1
@@ -17,7 +17,7 @@ dependencies:
   '@element-plus/icons-vue': 2.1.0
   ace-builds: 1.16.0
   element-plus: 2.3.2
-  everright-formeditor: 1.0.1_lgg5kdf4xfopc2l5ojrwxow5dm
+  everright-formeditor: 1.0.2_lgg5kdf4xfopc2l5ojrwxow5dm
   lodash-es: 4.17.21
   query-string: 8.1.0
   sass: 1.61.0
@@ -916,8 +916,8 @@ packages:
     resolution: {integrity: sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w==}
     dev: false
 
-  /everright-formeditor/1.0.1_lgg5kdf4xfopc2l5ojrwxow5dm:
-    resolution: {integrity: sha512-Hhpuj95qon+FAylglrApC1D4NDb/kp7oXluSl5zib618EUP6uC7mjZYpQNZUJOYCTplLCVRQveRecM9gKryekg==}
+  /everright-formeditor/1.0.2_lgg5kdf4xfopc2l5ojrwxow5dm:
+    resolution: {integrity: sha512-bKic5A5qXOfhUT3QRvt572RnDk2B10rmCTzx4T6yUqLsuvmBb0tbqoOdXdv746ZUwhKFjg0gk5vAwlE+/MGjzw==}
     peerDependencies:
       element-plus: ^2.2.28
       vant: ^4.0.8

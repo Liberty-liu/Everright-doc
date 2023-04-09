@@ -69,4 +69,5 @@ const handleListener = async ({ type, data }) => {
   :layoutType="layoutType"
   :lang="lang"
   @listener="handleListener"
+  fileUploadURI="https://api.everright.site/api/file/uploads"
 />

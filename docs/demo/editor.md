@@ -109,6 +109,7 @@ const handleListener = async ({ type, data }) => {
   <er-form-editor
     :layoutType="layoutType"
     :lang="lang"
+    fileUploadURI="https://api.everright.site/api/file/uploads"
     @listener="handleListener"
   />
 </ClientOnly>

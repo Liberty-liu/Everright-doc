@@ -188,6 +188,7 @@ const handleListener = async ({ type, data }) => {
             :lang="site.lang"
             @listener="handleListener"
             :field="field"
+            fileUploadURI="https://api.everright.site/api/file/uploads"
             ref="EReditorRef"/>
         </div>
       </div>
