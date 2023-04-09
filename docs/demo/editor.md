@@ -154,4 +154,7 @@ const handleListener = async ({ type, data }) => {
     color: var(--el-color-primary-light-5);
   }
 }
+.Everright-formEditor-Main__operation>div:first-child>i:first-child {
+  display: none;
+}
 </style>
