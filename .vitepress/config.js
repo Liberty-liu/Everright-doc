@@ -132,10 +132,8 @@ const renderSidebar = (lang = 'zh-cn') => {
   return result
 }
 export default defineConfig({
-  title: 'Everright',
   srcDir: 'docs',
   base: '/',
-  description: 'A VitePress Site',
   // cleanUrls: true,
   markdown: {
     lineNumbers: true,
@@ -150,9 +148,17 @@ export default defineConfig({
   ],
   locales: {
     root: {
+      title: 'Everright 低代码可视化表单编辑器',
       label: '中文',
       lang: 'zh-cn',
       link: '/zh-cn/',
+      description: 'Everright-formEditor是一款基于vue、element-plus、vant专业的在线低代码可视化表单编辑器，提供简单易用的界面和丰富的组件库，用户可以通过拖拽、配置等方式快速创建自定义表单，满足各种业务场景需求。同时支持PC和移动端，提供多语言和多平台的支持，让用户轻松完成表单设计。内部抛出三个组件分别适应不同的业务场景。具有完善的文档和使用案例',
+      head: [
+        [
+          'meta',
+          { name: 'keywords', content: 'Everright-formEditor,vue表单,可视化设计表单,vue动态表单,低代码表单,表单设计,element form 表单编辑器,vant form 表单编辑器' }
+        ]
+      ],
       themeConfig: {
         nav: [
           { text: 'Home', link: '/zh-cn/' },
@@ -175,9 +181,17 @@ export default defineConfig({
       }
     },
     en: {
+      title: 'Everright Low-code visual form editor',
       label: 'English',
       lang: 'en',
       link: '/en/',
+      description: 'Everright-formEditor is a professional online low-code visual form editor based on Vue, Element Plus, and Vant.  It provides a simple and easy-to-use interface and a rich component library.  Users can quickly create custom forms through drag and drop, configuration, and other methods to meet various business scenario requirements.  It supports both PC and mobile devices, and provides multi-language and multi-platform support to enable users to easily complete form design.  It also provides three components that can be used for different business scenarios.  It comes with comprehensive documentation and usage examples',
+      head: [
+        [
+          'meta',
+          { name: 'keywords', content: 'Everright-formEditor,vue Forms,Visual Design Forms,vue Dynamic Forms,Low-code Forms,form Design,element form Editor,vant form Editor' }
+        ]
+      ],
       themeConfig: {
         nav: [
           { text: 'Home', link: '/en/' },
