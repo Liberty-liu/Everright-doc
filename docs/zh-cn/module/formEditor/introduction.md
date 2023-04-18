@@ -31,10 +31,48 @@ features:
     details: 在表单编辑页面，提供实时预览功能，随时查看表单的渲染效果，以便对表单进行调整和优化
 ---
 
+<VPTeamPage class="recommendBlog">
+  <VPTeamPageSection>
+    <template #title>推荐优质公众号</template>
+    <template #members>
+      <VPTeamMembers size="small" :members="members" />
+    </template>
+  </VPTeamPageSection>
+</VPTeamPage>
 
 <script setup>
 import { useData, useRoute, useRouter } from 'vitepress'
+import {
+  VPTeamPage,
+  VPTeamPageTitle,
+  VPTeamMembers,
+  VPTeamPageSection
+} from 'vitepress/theme'
 const {
   lang
 } = useData()
+const members = [
+  {
+    avatar: '/img/promotion/wechat/491681738656_.pic.jpg',
+    name: '若川视野',
+    links: [
+      { icon: 'github', link: 'https://github.com/lxchuan12' }
+    ]
+  }
+]
 </script>
+
+<style lang="scss" scoped>
+.recommendBlog {
+  margin-top: 60px;
+  ::v-deep{
+    .avatar {
+      width: 80px !important;
+      height: 80px !important;
+    }
+    .avatar-img {
+      border-radius:0
+    }
+  }
+}
+</style>
