@@ -247,7 +247,7 @@ const handleListener = async ({ type, data }) => {
 <style lang="scss" scoped>
 .demo {
   &.demo_en {
-    ::v-deep .el-card {
+    ::v-deep(.el-card) {
       height: 500px !important;
     }
   }
@@ -263,7 +263,7 @@ const handleListener = async ({ type, data }) => {
   .item {
     padding: 8px;
     width: 100%;
-    ::v-deep .el-card {
+    ::v-deep(.el-card) {
       height: 460px;
       border: 1px solid #dcdfe6;
       border-radius: 5px;

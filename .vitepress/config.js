@@ -1,3 +1,4 @@
+import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vitepress'
 import * as erComponentsConfig from 'everright-formeditor/packages/formEditor/componentsConfig.js'
 // import { erComponentsConfig } from 'everright-formeditor'
@@ -224,6 +225,16 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/Liberty-liu/Everright-formEditor' }
     ]
   },
-  plugins: [
-  ]
+  vite: {
+    resolve: {
+      alias: [
+        {
+          find: /^.*\/VPTeamMembersItem\.vue$/,
+          replacement: fileURLToPath(
+            new URL('./components/VPTeamMembersItem.vue', import.meta.url)
+          )
+        }
+      ]
+    }
+  }
 })

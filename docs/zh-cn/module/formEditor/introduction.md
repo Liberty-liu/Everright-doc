@@ -48,6 +48,7 @@ import {
   VPTeamMembers,
   VPTeamPageSection
 } from 'vitepress/theme'
+// import db from '/theme/VPTeamMembers.vue'
 const {
   lang
 } = useData()
@@ -55,8 +56,25 @@ const members = [
   {
     avatar: '/img/promotion/wechat/491681738656_.pic.jpg',
     name: '若川视野',
+    desc: '公众号「若川视野」作者，组织了<a target="_blank" href="https://juejin.cn/post/7079706017579139102">源码共读活动</a>，帮助了几千人学习源码。写有<a target="_blank" href="https://juejin.cn/column/6960551178908205093">《学习源码整体架构系列》</a> 30余篇。',
     links: [
-      { icon: 'github', link: 'https://github.com/lxchuan12' }
+      {
+        icon: 'github',
+        link: 'https://github.com/lxchuan12'
+      }
+    ]
+  },
+  {
+    avatar: '/img/promotion/wechat/321682043130_.pic.jpg',
+    name: '前端早读课',
+    desc: '关注前端，产品体验设计，更关注前端同行的成长。 每天清晨五点早读，七万+同行相伴成长。',
+  },
+  {
+    avatar: '/img/promotion/wechat/161682054821_.pic.jpg',
+    name: '前端迷',
+    desc: '『前端迷』公众号是一个公益性的前端技术分享社区，不定期为前端开发者带来面试经验，源码解析以及技术分享，欢迎大家订阅。',
+    links: [
+      { icon: 'github', link: 'https://github.com/fxxqq' }
     ]
   }
 ]
