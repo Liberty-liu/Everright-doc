@@ -6,15 +6,23 @@ import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 import 'element-plus/dist/index.css'
 import 'vant/lib/index.css'
 import MyLayout from './MyLayout.vue'
-import { useRoute, useRouter, useData } from 'vitepress'
+import { useRouter, useData, inBrowser } from 'vitepress'
 export default {
   ...DefaultTheme,
   setup () {
-    if (!import.meta.env.SSR) {
+    if (inBrowser) {
       const { lang } = useData()
       watch(lang, () => {
         localStorage.setItem('er-lang', lang.value)
       })
+      const router = useRouter()
+      router.onBeforeRouteChange = (to) => {
+        // console.log(inBrowser)
+        // console.log(to)
+        if (typeof _hmt !== 'undefined') {
+          _hmt.push(['_trackPageview', to])
+        }
+      }
     }
   },
   enhanceApp(ctx) {

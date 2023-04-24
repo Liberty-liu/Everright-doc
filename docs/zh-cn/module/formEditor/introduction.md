@@ -76,6 +76,19 @@ const members = [
     links: [
       { icon: 'github', link: 'https://github.com/fxxqq' }
     ]
+  },
+  {
+    avatar: '/img/promotion/wechat/181682329576_.pic.jpg',
+    name: 'GitHub黑板报',
+    desc: '专注于分享 GitHub 上知名的 Python、Java、Web、AI、数据分析等多个领域的优质学习资源、开源项目及开发者工具，为程序员提供优质的开源项目。'
+  },
+  {
+    avatar: '/img/promotion/wechat/131682256691_.pic.jpg',
+    name: '前端下午茶',
+    desc: '一个专业又有意思的前端公众号，囊括 Vue、React、GraphQL、浏览器原理、Node、工程化等各方面多维度精选干货好文，非常适合前端开发者巩固基础、拓展视野。',
+    links: [
+      { icon: 'github', link: 'https://github.com/SHERlocked93/blog' }
+    ]
   }
 ]
 </script>
