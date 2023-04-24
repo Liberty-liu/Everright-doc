@@ -142,6 +142,17 @@ export default defineConfig({
   lastUpdated: true,
   head: [
     [
+      'script',
+      {},
+      `var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?1bf98ec4314f2c246b41b557796f1be9";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();`
+    ],
+    [
       'link',
       { rel: 'icon', href: '/Everright-logo.svg', type: 'image/svg+xml' }
     ]
