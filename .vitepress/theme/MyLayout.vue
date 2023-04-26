@@ -198,45 +198,53 @@ const handleListener = async ({ type, data }) => {
         <ul class="container">
           <li class="item">
             <el-card shadow="never">
-              <el-image :preview-src-list="['/img/demo0.png']" style="width: 100%; height: 260px;" src="/img/demo0.png"/>
+              <a :href="`/demo/editor.html?layoutType=1&isEdit=1&lang=${lang}`" target="_blank">
+                <el-image style="width: 100%; height: 260px;" src="/img/demo0.png"/>
+              </a>
               <h3>Editor</h3>
               <p>
                 layoutType1<br>
                 {{lang === 'en' ? 'Fields and layout not separated' : '字段与布局不分离'}}
               </p>
-              <a :href="`/demo/editor.html?layoutType=1&isEdit=1&lang=${lang}`" target="_blank">Demo</a>
+              <a class="itemButton" :href="`/demo/editor.html?layoutType=1&isEdit=1&lang=${lang}`" target="_blank">Demo</a>
             </el-card>
           </li>
           <li class="item">
             <el-card shadow="never">
-              <el-image :preview-src-list="['/img/demo0.png']" style="width: 100%; height: 260px;" src="/img/demo0.png"/>
+              <a :href="`/demo/editor.html?layoutType=2&isEdit=1&lang=${lang}`" target="_blank">
+                <el-image style="width: 100%; height: 260px;" src="/img/demo0.png"/>
+              </a>
               <h3>Editor</h3>
               <p>
                 layoutType2<br>
                 {{lang === 'en' ? 'Fields and layout separated' : '字段与布局分离'}}
               </p>
-              <a :href="`/demo/editor.html?layoutType=2&isEdit=1&lang=${lang}`" target="_blank">Demo</a>
+              <a class="itemButton" :href="`/demo/editor.html?layoutType=2&isEdit=1&lang=${lang}`" target="_blank">Demo</a>
             </el-card>
           </li>
           <li class="item">
             <el-card shadow="never">
-              <el-image :preview-src-list="['/img/demo1.png']" style="width: 100%; height: 260px;" src="/img/demo1.png"/>
+              <a :href="`/demo/preview.html?layoutType=1&lang=${lang}`" target="_blank">
+                <el-image style="width: 100%; height: 260px;" src="/img/demo1.png"/>
+              </a>
               <h3>Preview</h3>
               <p>
                 layoutType1<br>
                 {{lang === 'en' ? 'Fields and layout not separated' : '字段与布局不分离'}}
               </p>
-              <a :href="`/demo/preview.html?layoutType=1&lang=${lang}`" target="_blank">Demo</a>
+              <a class="itemButton" :href="`/demo/preview.html?layoutType=1&lang=${lang}`" target="_blank">Demo</a>
             </el-card>
           </li>
           <li class="item">
             <el-card shadow="never">
-              <el-image fit="contain" :preview-src-list="['/img/configPanel.png']" style="width: 100%; height: 260px;" src="/img/configPanel.png"/>
+              <a :href="`/demo/formEditorConfig.html?lang=${lang}`" target="_blank">
+                <el-image fit="contain" style="width: 100%; height: 260px;" src="/img/configPanel.png"/>
+              </a>
               <h3>Config panel</h3>
               <p>
                 {{lang === 'en' ? 'Various properties for displaying and editing form fields are provided, including basic information, types, layouts, and so on.' : '用于展示和编辑表单字段的各种属性，包括基础信息、类型、布局等等。'}}
               </p>
-              <a :href="`/demo/formEditorConfig.html?lang=${lang}`" target="_blank">Demo</a>
+              <a class="itemButton" :href="`/demo/formEditorConfig.html?lang=${lang}`" target="_blank">Demo</a>
             </el-card>
           </li>
         </ul>
@@ -288,7 +296,7 @@ const handleListener = async ({ type, data }) => {
         padding: 0 25px;
         line-height: 20px;
       }
-      a {
+      a.itemButton {
         height: 53px;
         line-height: 52px;
         font-size: 14px;
