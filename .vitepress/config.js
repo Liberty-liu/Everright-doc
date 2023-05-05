@@ -153,6 +153,13 @@ export default defineConfig({
   s.parentNode.insertBefore(hm, s);
 })();`
     ] : '',
+    isProd ? ['script', { src: 'https://www.googletagmanager.com/gtag/js?id=G-W75QLWQTY4' }] : '',
+    isProd ? ['script', {}, `      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-W75QLWQTY4');
+      `
+    ] : '',
     [
       'link',
       { rel: 'icon', href: '/Everright-logo.svg', type: 'image/svg+xml' }
