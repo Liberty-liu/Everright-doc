@@ -20,6 +20,11 @@ pnpm install
 pnpm run init
 ```
 
+## build ckeditor
+```shell
+pnpm run build:ckeditor5
+```
+
 ## 运行项目
 ```shell
 pnpm run dev

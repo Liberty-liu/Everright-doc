@@ -19,6 +19,11 @@ Before starting the development, you need to understand that the local environme
 pnpm run init
 ```
 
+## build ckeditor
+```shell
+pnpm run build:ckeditor5
+```
+
 ## Run
 ```shell
 pnpm run dev

@@ -10,9 +10,9 @@ defineProps<{
 
 <template>
   <article class="VPTeamMembersItem" :class="[size ?? 'medium']">
-    <div class="profile">
+    <div :class="['profile', member.type === 'tiktok' && 'profile1']">
       <figure class="avatar">
-        <img class="avatar-img" :src="member.avatar" :alt="member.name">
+        <el-image class="avatar-img" loading="lazy" :src="member.avatar" :preview-src-list="[member.avatar]" />
       </figure>
       <div class="data">
         <h1 class="name">
@@ -58,8 +58,13 @@ defineProps<{
 }
 
 .VPTeamMembersItem.small .avatar {
-  width: 64px;
-  height: 64px;
+  width: 80px;
+  height: 80px;
+  /*cursor: pointer;*/
+}
+.VPTeamMembersItem.small .profile1 .avatar {
+  width: 140px;
+  height: 170px;
 }
 
 .VPTeamMembersItem.small .name {

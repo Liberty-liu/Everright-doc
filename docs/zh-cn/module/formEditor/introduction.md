@@ -33,7 +33,7 @@ features:
 
 <VPTeamPage class="recommendBlog">
   <VPTeamPageSection>
-    <template #title>推荐优质公众号</template>
+    <template #title>推荐优质博主</template>
     <template #members>
       <VPTeamMembers size="small" :members="members" />
     </template>
@@ -89,6 +89,12 @@ const members = [
     links: [
       { icon: 'github', link: 'https://github.com/SHERlocked93/blog' }
     ]
+  },
+  {
+    avatar: '/img/promotion/tiktok/691683369864_.pic.jpg',
+    name: 'AI探长',
+    type: 'tiktok',
+    desc: '华为云最有价值专家 MVP; 微软认证人工智能专家MPP; 人民有点出版社科技书籍金牌领读人;<br> <strong>专注学习资源介绍、行业热点追踪、学习经验分享;</strong>'
   }
 ]
 </script>
@@ -97,10 +103,10 @@ const members = [
 .recommendBlog {
   margin-top: 60px;
   ::v-deep{
-    .avatar {
-      width: 80px !important;
-      height: 80px !important;
-    }
+    /*.avatar {*/
+    /*  width: 80px !important;*/
+    /*  height: 80px !important;*/
+    /*}*/
     .avatar-img {
       border-radius:0
     }
