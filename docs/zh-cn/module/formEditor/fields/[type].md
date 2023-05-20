@@ -6,7 +6,6 @@ import { useData } from 'vitepress'
 import { inject } from 'vue'
 const { page } = useData()
 const ER = inject('ER')
-console.log(page.value.params.type)
 </script>
 
 #### Field

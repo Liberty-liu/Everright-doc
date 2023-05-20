@@ -40,7 +40,6 @@ const customDefineClientComponent = (loader, handle = [], fn) => {
 const load = async () => {
   const queryString = await import('query-string')
   const query = queryString.default.parse(location.search)
-  console.log(query.lang)
   lang.value = query.lang || 'zh-cn'
 }
 if (!import.meta.env.SSR) {
