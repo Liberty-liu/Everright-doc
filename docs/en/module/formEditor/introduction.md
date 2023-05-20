@@ -29,6 +29,10 @@ features:
     details: Built-in internationalization (Chinese and English)
   - title: Real-time preview function
     details: On the form editing page, a real-time preview function is provided, allowing users to view the rendering effect of the form at any time, so that they can adjust and optimize the form accordingly.
+  - title: Logical controller
+    details: Allows users to configure fields through the GUI interface to display hidden, required, and read-only. When the field structure changes, in order to ensure the accuracy of logic control, automatically delete the corresponding logic rules.
+  - title: development friendly
+    details: Provide real-time preview of internal data structure, development environment with back-end service (SQLite)
 ---
 
 

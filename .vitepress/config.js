@@ -67,6 +67,10 @@ const renderSidebar = (lang = 'zh-cn') => {
           link: `/${lang}/module/formEditor/validate`
         },
         {
+          text: isZh ? '逻辑控制器' : 'Logical controller',
+          link: `/${lang}/module/formEditor/logic`
+        },
+        {
           text: isZh ? '国际化' : 'i18n',
           link: `/${lang}/module/formEditor/i18n`
         },
@@ -90,9 +94,13 @@ const renderSidebar = (lang = 'zh-cn') => {
     }
   ]
   bars.push({
-    text: isZh ? '字段数据结构' : 'Field data',
+    text: isZh ? '数据结构' : 'Data structure',
     collapsed: false,
     items: [
+      {
+        text: isZh ? '表单属性' : 'Form Attribute',
+        link: `/${lang}/module/formEditor/fields/root`
+      },
       {
         text: isZh ? '字段' : 'Field',
         items: fields.map((field) => {

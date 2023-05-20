@@ -307,10 +307,17 @@ type:
 
   i18n
 
-
 - **save**
 
   操作区域保存按钮
+
+- **logic:cancel**
+
+  逻辑控制弹框确认事件
+- **logic:confirm**
+
+  逻辑控制关闭弹框事件
+
 
 ### **Exposes**
 

@@ -133,6 +133,7 @@ Everright-formEditor内部抛出三个组件分别适应不同的业务场景，
 | `fileUploadURI` | String  | 图片、文件上传接口 | - | - | - |
 | `isShowCompleteButton` | Boolean  | 是否在表单配置显示提交按钮配置选项 | true\|false  | true | - |
 | `field` | Object  | 配置字段数据 | -  | - | true |
+| `fields` | Array  | 逻辑控制器内部的筛选器用到的数据 | -  | - | - |
 
 ### **Event**
 | 事件名称  |      说明      |
@@ -143,3 +144,9 @@ type:
 - **changeParams**
 
   数据变动事件
+- **logic:cancel**
+
+  逻辑控制弹框确认事件
+- **logic:confirm**
+
+  逻辑控制关闭弹框事件

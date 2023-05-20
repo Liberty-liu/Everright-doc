@@ -25,7 +25,8 @@ export default {
   },
   enhanceApp(ctx) {
     ctx.app.provide('ER', reactive({
-      field: {}
+      field: {},
+      logic: {}
     }))
     ctx.app.use(ElementPlus)
     ctx.app.use(Vant)

@@ -133,6 +133,7 @@ Everright-formEditor has three internal components that are suitable for differe
 | `fileUploadURI` | String  | Image and file upload URL | - | - | - |
 | `isShowCompleteButton` | Boolean  | Whether to display the option to configure the submit button in the form settings | true\|false  | true | - |
 | `field` | Object  | Configuration field data | -  | - | true |
+| `fields` | Array  | Data used by filters inside the logical controller | -  | - | - |
 
 ### **Event**
 | Name  |      Description      |
@@ -143,3 +144,10 @@ type:
 - **changeParams**
 
   Selection data has changed
+- **logic:cancel**
+
+  Logical controller enclosure confirmation event
+- **logic:confirm**
+
+  Logical control closes the pop-up event
+

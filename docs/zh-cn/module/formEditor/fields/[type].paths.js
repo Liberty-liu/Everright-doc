@@ -47,6 +47,7 @@ export default {
       }
     })
     return [
+      { params: { type: 'root' } },
       ...fields.map((field) => {
         return {
           params:

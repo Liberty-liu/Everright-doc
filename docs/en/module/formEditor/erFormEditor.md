@@ -307,10 +307,16 @@ type:
 
   i18n
 
-
 - **save**
 
   Save button in the operation area
+
+- **logic:cancel**
+
+  Logical controller enclosure confirmation event
+- **logic:confirm**
+
+  Logical control closes the pop-up event
 
 ### **Exposes**
 

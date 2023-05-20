@@ -29,6 +29,10 @@ features:
     details: 内置了国际化（中文和英文）
   - title: 实时预览功能
     details: 在表单编辑页面，提供实时预览功能，随时查看表单的渲染效果，以便对表单进行调整和优化
+  - title: 逻辑控制器
+    details: 可以让用户通过GUI界面配置字段显示隐藏、必填、只读。当字段结构发生变动，为了保证逻辑控制的准确性，自动删除相应的逻辑规则
+  - title: 对开发友好
+    details: 提供实时预览内部数据结构、开发环境具有后端服务（SQLite）
 ---
 
 <VPTeamPage class="recommendBlog">
