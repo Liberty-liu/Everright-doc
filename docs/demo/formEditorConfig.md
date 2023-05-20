@@ -9,6 +9,7 @@ const lang = ref('zh-cn')
 let aceEditor = '' 
 const EReditorRef = ref(null)
 const fieldData = ref({})
+const logicData = ref('{}')
 const store = reactive({
   fields: [],
   layouts: []
@@ -91,6 +92,9 @@ const handleListener = async ({ type, data }) => {
   if (type === 'changeParams') {
     fieldData.value = JSON.stringify(data, '', 2)
   }
+  if (/^logic:(cancel|confirm)$/.test(type)) {
+    logicData.value = JSON.stringify(data, '', 2)
+  }
 }
 </script>
 <ClientOnly>
@@ -123,13 +127,22 @@ const handleListener = async ({ type, data }) => {
             fileUploadURI="https://api.everright.site/api/file/uploads"
             @listener="handleListener"
             :field="sector"
+            :fields="store.fields.map(e => e.columns[0])"
             ref="EReditorRef"/>
         </div>
       </el-aside>
       <el-main>
-       <el-input
+        <el-input
           v-model="fieldData"
-          :rows="40"
+          :rows="value0 === 'root' ? 20 : 40"
+          disabled
+          type="textarea"
+          placeholder="Please input"
+        />
+        <el-input
+          v-if="value0 === 'root'"
+          v-model="logicData"
+          :rows="value0 === 'root' ? 20 : 40"
           disabled
           type="textarea"
           placeholder="Please input"
