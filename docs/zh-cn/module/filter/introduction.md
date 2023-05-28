@@ -15,6 +15,9 @@ hero:
     - theme: alt
       text: Documentation
       link: /zh-cn/module/filter/doc
+    - theme: alt
+      text: View on GitHub
+      link: https://github.com/Liberty-liu/Everright-filter
 
 features:
   - title: 多类型筛选

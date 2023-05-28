@@ -12,9 +12,10 @@ const ERfilterRef = ref(null)
 const state = reactive({
   value0: {}
 })
+const host = process.env.NODE_ENV === 'production' ? 'https://api.everright.site' : 'http://localhost:8001'
 const httpParams = {
   options: {
-    url: 'http://localhost:8001/api/filter/options',
+    url: `${host}/api/filter/options`,
     get: { // 定义get
       query: {
         a: 20
@@ -22,7 +23,7 @@ const httpParams = {
     }
   },
   conditions: {
-    url: 'http://localhost:8001/api/filter/conditions',
+    url: `${host}/api/filter/conditions`,
     get: { // 定义get
       query: {
         a: 20
@@ -30,7 +31,7 @@ const httpParams = {
     }
   },
   props: {
-    url: 'http://localhost:8001/api/filter/props',
+    url: `${host}/api/filter/props`,
     get: { // 定义get
       query: {
         a: 20
@@ -38,7 +39,7 @@ const httpParams = {
     }
   },
   propValues: {
-    url: 'http://localhost:8001/api/filter/propValues',
+    url: `${host}/api/filter/propValues`,
     get: { // 定义get
       query: {
         a: 50
@@ -83,7 +84,7 @@ const handleEvent = (type) => {
       state.value0 = unref(ERfilterRef).getData()
       break
     case 4:
-      unref(ERfilterRef).pushData('Gender11111')
+      unref(ERfilterRef).pushData('cascader01')
       break
     case 5:
       unref(ERfilterRef).clearData('values')
@@ -105,7 +106,7 @@ const handleEvent = (type) => {
     <el-button @click="() => handleEvent(2)" type="primary">Reset Data</el-button>
     <el-button @click="() => handleEvent(5)" type="primary">Clear Data</el-button>
     <el-button @click="() => handleEvent(3)" type="primary">Get Data</el-button>
-    <el-button @click="() => handleEvent(4)" type="primary">手动添加一条</el-button>
+    <el-button @click="() => handleEvent(4)" type="primary">Add condition</el-button>
     <el-input
       type="textarea"
       readonly

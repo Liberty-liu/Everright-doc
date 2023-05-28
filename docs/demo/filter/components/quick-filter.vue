@@ -12,9 +12,10 @@ const ERfilterRef = ref(null)
 const state = reactive({
   value0: {}
 })
+const host = process.env.NODE_ENV === 'production' ? 'https://api.everright.site' : 'http://localhost:8001'
 const httpParams = {
   conditions: {
-    url: 'http://localhost:8001/api/filter/conditions',
+    url: `${host}/api/filter/conditions`,
     get: { // 定义get
       query: {
         a: 20
@@ -22,7 +23,7 @@ const httpParams = {
     }
   },
   props: {
-    url: 'http://localhost:8001/api/filter/props',
+    url: `${host}/api/filter/props`,
     get: { // 定义get
       query: {
         a: 20
@@ -30,7 +31,7 @@ const httpParams = {
     }
   },
   propValues: {
-    url: 'http://localhost:8001/api/filter/propValues',
+    url: `${host}/api/filter/propValues`,
     get: { // 定义get
       query: {
         a: 50

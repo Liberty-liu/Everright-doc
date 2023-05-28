@@ -15,6 +15,9 @@ hero:
     - theme: alt
       text: Documentation
       link: /en/module/filter/doc
+    - theme: alt
+      text: View on GitHub
+      link: https://github.com/Liberty-liu/Everright-filter
 
 features:
   - title: Multi-type filter

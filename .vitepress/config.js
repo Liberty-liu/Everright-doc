@@ -185,6 +185,9 @@ const renderSidebar = (lang = 'zh-cn') => {
                 link: `/${lang}/module/filter/options/${node.value}`
               }))
             }
+          }).concat({
+            text: isZh ? '操作符' : 'operators',
+            link: `/${lang}/module/filter/options/operators`
           })
         },
         {
@@ -346,7 +349,7 @@ export default defineConfig({
       copyright: 'Copyright © 2023-present <a href="https://github.com/Liberty-liu">Liberty</a>'
     },
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/Liberty-liu/Everright-formEditor' }
+      { icon: 'github', link: 'https://github.com/Liberty-liu' }
     ]
   },
   vite: {

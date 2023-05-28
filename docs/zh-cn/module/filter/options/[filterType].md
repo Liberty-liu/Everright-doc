@@ -4,7 +4,7 @@ import _ from 'lodash-es'
 import { inject, ref, nextTick, reactive } from 'vue'
 import { data } from '../../../../../.vitepress/data/example.data.js'
 const { page } = useData()
-const host = 'http://localhost:8001'
+const host = process.env.NODE_ENV === 'production' ? 'https://api.everright.site' : 'http://localhost:8001'
 const ERfilterRef = ref(null)
 const ER = inject('ER')
 let filterId = ''

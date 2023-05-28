@@ -15,6 +15,9 @@ hero:
     - theme: alt
       text: Documentation
       link: /zh-cn/module/formEditor/doc
+    - theme: alt
+      text: View on GitHub
+      link: https://github.com/Liberty-liu/Everright-formEditor
 
 features:
   - title: 灵活的拖放功能
