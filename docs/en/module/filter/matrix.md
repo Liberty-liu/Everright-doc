@@ -6,6 +6,8 @@ outline: deep
 ## 1.screenshot example
 <el-image loading="lazy" :preview-src-list="['/img/matrix.png']" src="/img/matrix.png"/>
 
+<a href="/demo/filter/matrix.html?lang=en" target="_blank">View demo</a>
+
 ## 2.type matrix code
 
 ::: details Click me to view the code

@@ -34,7 +34,7 @@ const handleClick = () => {
 </ClientOnly>
 <demo :lang="lang"/>
 
-<style>
+<style scoped>
 .btn-51 {
 margin: 50px;
 display: inline;

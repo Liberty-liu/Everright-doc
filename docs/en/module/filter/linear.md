@@ -7,6 +7,8 @@ outline: deep
 ## 1.screenshot example
 <el-image loading="lazy" :preview-src-list="['/img/linear.png']" src="/img/linear.png"/>
 
+<a href="/demo/filter/linear.html?lang=en" target="_blank">View demo</a>
+
 ## 2.type linear code
 
 ::: details Click me to view the code
