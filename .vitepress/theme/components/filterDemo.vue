@@ -17,7 +17,7 @@ const {
           <h3>linear</h3>
           <p>
             {{ lang === 'en' ? 'Application Scenario' : '应用场景'}}<br>
-            {{lang === 'en' ? 'Fields and layout not separated' : '适用于数据筛选'}}
+            {{lang === 'en' ? 'Suitable for data filtering' : '适用于数据筛选'}}
           </p>
           <a class="itemButton" :href="`/demo/filter/linear.html?lang=${lang}`" target="_blank">Demo</a>
         </el-card>
@@ -30,7 +30,7 @@ const {
           <h3>matrix</h3>
           <p>
             {{ lang === 'en' ? 'Application Scenario' : '应用场景'}}<br>
-            {{lang === 'en' ? 'Fields and layout not separated' : '适用于数据筛选'}}
+            {{lang === 'en' ? 'Suitable for data filtering' : '适用于数据筛选'}}
           </p>
           <a class="itemButton" :href="`/demo/filter/matrix.html?lang=${lang}`" target="_blank">Demo</a>
         </el-card>
@@ -43,7 +43,7 @@ const {
           <h3>quick-search</h3>
           <p>
             {{ lang === 'en' ? 'Application Scenario' : '应用场景'}}<br>
-            {{lang === 'en' ? 'Fields and layout not separated' : '适用于搜索'}}
+            {{lang === 'en' ? 'Suitable for search' : '适用于搜索'}}
           </p>
           <a class="itemButton" :href="`/demo/filter/quick-search.html?lang=${lang}`" target="_blank">Demo</a>
         </el-card>

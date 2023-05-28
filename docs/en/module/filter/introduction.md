@@ -27,7 +27,8 @@ features:
   - title: Flexible date filtering
     details: Provides great flexibility. It supports filtering on date, year, month and day. It also supports the selection of relative time and absolute time, such as today, this week, this month, this year, past N days/hours, future N days/hours, etc. This makes date filtering more flexible and can meet the needs of various time dimensions.
   - title: Flexible Screening Portfolio
-    details: Provides great flexibility. It supports filtering on date, year, month and day. It also supports the selection of relative time and absolute time, such as today, this week, this month, this year, past N days/hours, future N days/hours, etc. This makes date filtering more flexible and can meet the needs of various time dimensions.
+    details: Support conditional grouping settings, you can use logical operators (AND/OR) to combine multiple conditions to implement complex data filtering logic. Data that meets multiple conditions can be filtered out more precisely to meet the needs of advanced data analysis and mining.
+
   - title: Behavioral Data Screening
     details: For behavioral data, it supports setting start and end time, limit times and limit attributes. You can precisely filter out actions that occurred within a specific time period, and further filter based on frequency and attribute conditions.
   - title: Can be embedded into different UI interfaces
