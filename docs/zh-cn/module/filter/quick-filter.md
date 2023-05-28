@@ -6,6 +6,8 @@ outline: deep
 ## 1.截图示例
 <el-image loading="lazy" :preview-src-list="['/img/quick-filter.png']" src="/img/quick-filter.png"/>
 
+<a href="/demo/filter/quick-filter.html?lang=zh-cn" target="_blank">View demo</a>
+
 ## 2.type quick-filter code
 
 ::: details Click me to view the code

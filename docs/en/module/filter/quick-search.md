@@ -6,6 +6,8 @@ outline: deep
 ## 1.screenshot example
 <el-image loading="lazy" :preview-src-list="['/img/quick-search.png']" src="/img/quick-search.png"/>
 
+<a href="/demo/filter/quick-search.html?lang=en" target="_blank">View demo</a>
+
 ## 2.type quick-search code
 
 ::: details Click me to view the code
