@@ -26,7 +26,13 @@ export default {
   enhanceApp(ctx) {
     ctx.app.provide('ER', reactive({
       field: {},
-      logic: {}
+      logic: {},
+      filterData: {
+        isRender: true,
+        option: {},
+        operators: [],
+        TimesOperators: []
+      }
     }))
     ctx.app.use(ElementPlus)
     ctx.app.use(Vant)

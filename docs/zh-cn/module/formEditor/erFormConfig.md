@@ -115,7 +115,7 @@ Everright-formEditor内部抛出三个组件分别适应不同的业务场景，
 <style scoped lang="scss">
   .customConfig {
     padding: 10px;
-    ::v-deep .Everright-formEditor-Config {
+    :deep .Everright-formEditor-Config {
       width: 100%;
     }
   }

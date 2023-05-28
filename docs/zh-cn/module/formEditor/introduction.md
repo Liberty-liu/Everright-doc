@@ -106,11 +106,7 @@ const members = [
 <style lang="scss" scoped>
 .recommendBlog {
   margin-top: 60px;
-  ::v-deep{
-    /*.avatar {*/
-    /*  width: 80px !important;*/
-    /*  height: 80px !important;*/
-    /*}*/
+  :deep{
     .avatar-img {
       border-radius:0
     }

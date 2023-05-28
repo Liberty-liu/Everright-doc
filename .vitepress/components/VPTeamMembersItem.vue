@@ -176,7 +176,7 @@ defineProps<{
   margin: 0 auto;
 }
 
-.desc ::v-deep(a) {
+.desc :deep(a) {
   font-weight: 500;
   color: var(--vp-c-brand);
   text-decoration-style: dotted;
