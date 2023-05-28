@@ -1,8 +1,8 @@
 import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vitepress'
 import * as erComponentsConfig from 'everright-formeditor/packages/formEditor/componentsConfig.js'
-// import { erComponentsConfig } from 'everright-formeditor'
 import _ from 'lodash-es'
+import { data } from './data/example.data.js'
 const renderSidebar = (lang = 'zh-cn') => {
   const isZh = lang === 'zh-cn'
   const fieldsConfig = _.cloneDeep(erComponentsConfig.fieldsConfig)
@@ -49,7 +49,7 @@ const renderSidebar = (lang = 'zh-cn') => {
         break
     }
   })
-  const bars = [
+  const formEditorNavs = [
     {
       text: isZh ? '指南' : 'Guide',
       collapsed: false,
@@ -93,7 +93,7 @@ const renderSidebar = (lang = 'zh-cn') => {
       ]
     }
   ]
-  bars.push({
+  formEditorNavs.push({
     text: isZh ? '数据结构' : 'Data structure',
     collapsed: false,
     items: [
@@ -127,7 +127,7 @@ const renderSidebar = (lang = 'zh-cn') => {
       }
     ]
   })
-  bars.push({
+  formEditorNavs.push({
     text: isZh ? '开发' : 'Development',
     items: [
       {
@@ -137,7 +137,81 @@ const renderSidebar = (lang = 'zh-cn') => {
     ]
   })
   const result = {}
-  result[`/${lang}/module/formEditor`] = bars
+  result[`/${lang}/module/formEditor`] = formEditorNavs
+  const filterNavs = [
+    {
+      text: isZh ? '指南' : 'Guide',
+      collapsed: false,
+      items: [
+        {
+          text: isZh ? '关于筛选器' : 'About the Filter',
+          link: `/${lang}/module/filter/doc`
+        },
+        {
+          text: isZh ? '安装' : 'Installation',
+          link: `/${lang}/module/filter/started`
+        },
+        {
+          text: 'linear',
+          link: `/${lang}/module/filter/linear`
+        },
+        {
+          text: 'matrix',
+          link: `/${lang}/module/filter/matrix`
+        },
+        {
+          text: 'quick-search',
+          link: `/${lang}/module/filter/quick-search`
+        },
+        {
+          text: 'quick-filter',
+          link: `/${lang}/module/filter/quick-filter`
+        }
+      ]
+    },
+    {
+      text: isZh ? '数据结构' : 'Data structure',
+      collapsed: false,
+      items: [
+        {
+          text: 'API options',
+          collapsed: false,
+          items: data.options.map(node => {
+            return {
+              text: isZh ? node.label : node.en_label,
+              collapsed: false,
+              items: node.children.map(node => ({
+                text: isZh ? node.label : node.en_label,
+                link: `/${lang}/module/filter/options/${node.value}`
+              }))
+            }
+          }).concat({
+            text: isZh ? '操作符' : 'operators',
+            link: `/${lang}/module/filter/options/operators`
+          })
+        },
+        {
+          text: 'API conditions',
+          link: `/${lang}/module/filter/conditions`
+        },
+        {
+          text: 'API props',
+          link: `/${lang}/module/filter/props`
+        },
+        {
+          text: 'API propValues',
+          link: `/${lang}/module/filter/propValues`
+        }
+      ]
+      // items: [
+      //   {
+      //     text: 'API options',
+      //     items: Object.entries(data).map(([type, value]) => ({ text: value.label, link: `/${lang}/module/filter/options/${type}` }))
+      //   }
+      // ]
+    }
+  ]
+  result[`/${lang}/module/filter`] = filterNavs
   return result
 }
 const isProd = process.env.NODE_ENV === 'production'
@@ -203,6 +277,19 @@ export default defineConfig({
               }
             ]
           },
+          {
+            text: 'Everright-filter',
+            items: [
+              {
+                text: '简介',
+                link: 'zh-cn/module/filter/introduction'
+              },
+              {
+                text: '文档',
+                link: 'zh-cn/module/filter/doc'
+              }
+            ]
+          },
           { text: 'About me', link: '/zh-cn/aboutme' },
         ],
         sidebar: renderSidebar('zh-cn')
@@ -236,6 +323,19 @@ export default defineConfig({
               }
             ]
           },
+          {
+            text: 'Everright-filter',
+            items: [
+              {
+                text: 'Introduction',
+                link: 'en/module/filter/introduction'
+              },
+              {
+                text: 'Documentation',
+                link: 'en/module/filter/doc'
+              }
+            ]
+          },
           { text: 'About me', link: '/en/aboutme' },
         ],
         sidebar: renderSidebar('en')
@@ -249,7 +349,7 @@ export default defineConfig({
       copyright: 'Copyright © 2023-present <a href="https://github.com/Liberty-liu">Liberty</a>'
     },
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/Liberty-liu/Everright-formEditor' }
+      { icon: 'github', link: 'https://github.com/Liberty-liu' }
     ]
   },
   vite: {

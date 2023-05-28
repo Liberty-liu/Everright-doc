@@ -15,6 +15,9 @@ hero:
     - theme: alt
       text: Documentation
       link: /en/module/formEditor/doc
+    - theme: alt
+      text: View on GitHub
+      link: https://github.com/Liberty-liu/Everright-formEditor
 
 features:
   - title: Flexible interaction
