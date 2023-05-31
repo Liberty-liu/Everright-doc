@@ -5,6 +5,7 @@ import _ from 'lodash-es'
 import { data } from './data/example.data.js'
 const renderSidebar = (lang = 'zh-cn') => {
   const isZh = lang === 'zh-cn'
+  const prefix = isZh ? '' : `/${lang}`
   const fieldsConfig = _.cloneDeep(erComponentsConfig.fieldsConfig)
   const fields = [...fieldsConfig[0].list, ...fieldsConfig[1].list].map(e => {
     let label = ''
@@ -56,39 +57,39 @@ const renderSidebar = (lang = 'zh-cn') => {
       items: [
         {
           text: isZh ? '安装' : 'Installation',
-          link: `/${lang}/module/formEditor/started`
+          link: `${prefix}/formEditor/started`
         },
         {
           text: isZh ? '关于编辑器' : 'About the Editor',
-          link: `/${lang}/module/formEditor/doc`
+          link: `${prefix}/formEditor/doc`
         },
         {
           text: isZh ? '表单校验' : 'Form Validation',
-          link: `/${lang}/module/formEditor/validate`
+          link: `${prefix}/formEditor/validate`
         },
         {
           text: isZh ? '逻辑控制器' : 'Logical controller',
-          link: `/${lang}/module/formEditor/logic`
+          link: `${prefix}/formEditor/logic`
         },
         {
           text: isZh ? '国际化' : 'i18n',
-          link: `/${lang}/module/formEditor/i18n`
+          link: `${prefix}/formEditor/i18n`
         },
         {
           text: 'erFormEditor',
-          link: `/${lang}/module/formEditor/erFormEditor`
+          link: `${prefix}/formEditor/erFormEditor`
         },
         {
           text: 'erFormPreview',
-          link: `/${lang}/module/formEditor/erFormPreview`
+          link: `${prefix}/formEditor/erFormPreview`
         },
         {
           text: 'erFormConfig',
-          link: `/${lang}/module/formEditor/erFormConfig`
+          link: `${prefix}/formEditor/erFormConfig`
         },
         {
           text: 'erGeneratorData',
-          link: `/${lang}/module/formEditor/erGeneratorData`
+          link: `${prefix}/formEditor/erGeneratorData`
         }
       ]
     }
@@ -99,7 +100,7 @@ const renderSidebar = (lang = 'zh-cn') => {
     items: [
       {
         text: isZh ? '表单属性' : 'Form Attribute',
-        link: `/${lang}/module/formEditor/fields/root`
+        link: `${prefix}/formEditor/fields/root`
       },
       {
         text: isZh ? '字段' : 'Field',
@@ -108,9 +109,9 @@ const renderSidebar = (lang = 'zh-cn') => {
             text: field
           }
           if (field === 'ID number') {
-            result.link = `/${lang}/module/formEditor/fields/idNumber`
+            result.link = `${prefix}/formEditor/fields/idNumber`
           } else {
-            result.link = `/${lang}/module/formEditor/fields/${_.lowerCase(field)}`
+            result.link = `${prefix}/formEditor/fields/${_.lowerCase(field)}`
           }
           return result
         })
@@ -121,7 +122,7 @@ const renderSidebar = (lang = 'zh-cn') => {
         items: layouts.map((field) => {
           return {
             text: field,
-            link: `/${lang}/module/formEditor/fields/${field.toLocaleLowerCase()}`
+            link: `${prefix}/formEditor/fields/${field.toLocaleLowerCase()}`
           }
         })
       }
@@ -132,12 +133,12 @@ const renderSidebar = (lang = 'zh-cn') => {
     items: [
       {
         text: isZh ? '开发指南' : 'Development Guide',
-        link: `/${lang}/module/formEditor/development`
+        link: `${prefix}/formEditor/development`
       }
     ]
   })
   const result = {}
-  result[`/${lang}/module/formEditor`] = formEditorNavs
+  result[`${prefix}/formEditor`] = formEditorNavs
   const filterNavs = [
     {
       text: isZh ? '指南' : 'Guide',
@@ -145,27 +146,27 @@ const renderSidebar = (lang = 'zh-cn') => {
       items: [
         {
           text: isZh ? '关于筛选器' : 'About the Filter',
-          link: `/${lang}/module/filter/doc`
+          link: `${prefix}/filter/doc`
         },
         {
           text: isZh ? '安装' : 'Installation',
-          link: `/${lang}/module/filter/started`
+          link: `${prefix}/filter/started`
         },
         {
           text: 'linear',
-          link: `/${lang}/module/filter/linear`
+          link: `${prefix}/filter/linear`
         },
         {
           text: 'matrix',
-          link: `/${lang}/module/filter/matrix`
+          link: `${prefix}/filter/matrix`
         },
         {
           text: 'quick-search',
-          link: `/${lang}/module/filter/quick-search`
+          link: `${prefix}/filter/quick-search`
         },
         {
           text: 'quick-filter',
-          link: `/${lang}/module/filter/quick-filter`
+          link: `${prefix}/filter/quick-filter`
         }
       ]
     },
@@ -182,41 +183,42 @@ const renderSidebar = (lang = 'zh-cn') => {
               collapsed: false,
               items: node.children.map(node => ({
                 text: isZh ? node.label : node.en_label,
-                link: `/${lang}/module/filter/options/${node.value}`
+                link: `${prefix}/filter/options/${node.value}`
               }))
             }
           }).concat({
             text: isZh ? '操作符' : 'operators',
-            link: `/${lang}/module/filter/options/operators`
+            link: `${prefix}/filter/options/operators`
           })
         },
         {
           text: 'API conditions',
-          link: `/${lang}/module/filter/conditions`
+          link: `${prefix}/filter/conditions`
         },
         {
           text: 'API props',
-          link: `/${lang}/module/filter/props`
+          link: `${prefix}/filter/props`
         },
         {
           text: 'API propValues',
-          link: `/${lang}/module/filter/propValues`
+          link: `${prefix}/filter/propValues`
         }
       ]
       // items: [
       //   {
       //     text: 'API options',
-      //     items: Object.entries(data).map(([type, value]) => ({ text: value.label, link: `/${lang}/module/filter/options/${type}` }))
+      //     items: Object.entries(data).map(([type, value]) => ({ text: value.label, link: `${prefix}/filter/options/${type}` }))
       //   }
       // ]
     }
   ]
-  result[`/${lang}/module/filter`] = filterNavs
+  result[`${prefix}/filter`] = filterNavs
   return result
 }
 const isProd = process.env.NODE_ENV === 'production'
 export default defineConfig({
   srcDir: 'docs',
+  lang: 'zh-cn',
   base: '/',
   // cleanUrls: true,
   markdown: {
@@ -253,7 +255,6 @@ export default defineConfig({
       title: 'Everright 低代码可视化表单编辑器',
       label: '中文',
       lang: 'zh-cn',
-      link: '/zh-cn/',
       description: 'Everright-formEditor是一款基于vue、element-plus、vant专业的在线低代码可视化表单编辑器，提供简单易用的界面和丰富的组件库，用户可以通过拖拽、配置等方式快速创建自定义表单，满足各种业务场景需求。同时支持PC和移动端，提供多语言和多平台的支持，让用户轻松完成表单设计。内部抛出三个组件分别适应不同的业务场景。具有完善的文档和使用案例',
       head: [
         [
@@ -263,17 +264,17 @@ export default defineConfig({
       ],
       themeConfig: {
         nav: [
-          { text: 'Home', link: '/zh-cn/' },
+          { text: 'Home', link: '/' },
           {
             text: 'Everright-formEditor',
             items: [
               {
                 text: '简介',
-                link: 'zh-cn/module/formEditor/introduction'
+                link: 'formEditor/introduction'
               },
               {
                 text: '文档',
-                link: 'zh-cn/module/formEditor/doc'
+                link: 'formEditor/doc'
               }
             ]
           },
@@ -282,24 +283,24 @@ export default defineConfig({
             items: [
               {
                 text: '简介',
-                link: 'zh-cn/module/filter/introduction'
+                link: 'filter/introduction'
               },
               {
                 text: '文档',
-                link: 'zh-cn/module/filter/doc'
+                link: 'filter/doc'
               }
             ]
           },
-          { text: 'About me', link: '/zh-cn/aboutme' },
+          { text: 'About me', link: 'aboutme' },
         ],
-        sidebar: renderSidebar('zh-cn')
+        sidebar: renderSidebar()
       }
     },
     en: {
       title: 'Everright Low-code visual form editor',
       label: 'English',
       lang: 'en',
-      link: '/en/',
+      // link: '/en/',
       description: 'Everright-formEditor is a professional online low-code visual form editor based on Vue, Element Plus, and Vant.  It provides a simple and easy-to-use interface and a rich component library.  Users can quickly create custom forms through drag and drop, configuration, and other methods to meet various business scenario requirements.  It supports both PC and mobile devices, and provides multi-language and multi-platform support to enable users to easily complete form design.  It also provides three components that can be used for different business scenarios.  It comes with comprehensive documentation and usage examples',
       head: [
         [
@@ -315,11 +316,11 @@ export default defineConfig({
             items: [
               {
                 text: 'Introduction',
-                link: 'en/module/formEditor/introduction'
+                link: 'en/formEditor/introduction'
               },
               {
                 text: 'Documentation',
-                link: 'en/module/formEditor/doc'
+                link: 'en/formEditor/doc'
               }
             ]
           },
@@ -328,11 +329,11 @@ export default defineConfig({
             items: [
               {
                 text: 'Introduction',
-                link: 'en/module/filter/introduction'
+                link: 'en/filter/introduction'
               },
               {
                 text: 'Documentation',
-                link: 'en/module/filter/doc'
+                link: 'en/filter/doc'
               }
             ]
           },

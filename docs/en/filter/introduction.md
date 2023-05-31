@@ -11,10 +11,10 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /en/module/filter/started
+      link: /en/filter/started
     - theme: alt
       text: Documentation
-      link: /en/module/filter/doc
+      link: /en/filter/doc
     - theme: alt
       text: View on GitHub
       link: https://github.com/Liberty-liu/Everright-filter
