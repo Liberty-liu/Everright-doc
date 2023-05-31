@@ -14,8 +14,8 @@ const isRenderFormEditorConfigPanel = ref(false)
 const isRenderFilterConfigPanel = ref(false)
 const isRenderFormEditorDemo = ref(false)
 const isRenderFilterDemo = ref(false)
-const formEditorHomeRe = /(en|zh-cn)+(\/module\/formEditor\/introduction.html){1}/
-const filterHomeRe = /(en|zh-cn)+(\/module\/filter\/introduction.html){1}/
+const formEditorHomeRe = /(\/formEditor\/introduction.html){1}/
+const filterHomeRe = /(\/filter\/introduction.html){1}/
 const ER = inject('ER')
 const {
   site,

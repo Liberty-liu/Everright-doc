@@ -1,4 +1,4 @@
-import { data } from '../../../../.vitepress/data/example.data.js'
+import { data } from '../../../.vitepress/data/example.data.js'
 export default {
   paths () {
     const result = []
