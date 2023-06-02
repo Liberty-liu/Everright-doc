@@ -173,7 +173,7 @@ Operate the configuration panel on the right to define the filter, and click the
 },
 {
   "type": "date", // Duration
-  "datePanel": { 
+  "datePanel": {
   }
 },
 {
@@ -192,7 +192,7 @@ Operate the configuration panel on the right to define the filter, and click the
 
 ### Association graph
 
-<el-image style="margin: 16px 0;" loading="lazy" :preview-src-list="['/img/filterAssociated.png']" src="/img/filterAssociated.png"/>
+<el-image style="margin: 16px 0;" loading="lazy" :preview-src-list="['/img/filterAssociated.jpg']" src="/img/filterAssociated.jpg"/>
 
 <style scoped lang="scss">
 .customFilter {

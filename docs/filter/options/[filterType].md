@@ -172,7 +172,7 @@ const handleListener = ({ type, data }) => {
 },
 {
   "type": "date", // 起止时间
-  "datePanel": { 
+  "datePanel": {
   }
 },
 {
@@ -191,7 +191,7 @@ const handleListener = ({ type, data }) => {
 
 ### Association graph
 
-<el-image style="margin: 16px 0;" loading="lazy" :preview-src-list="['/img/filterAssociated.png']" src="/img/filterAssociated.png"/>
+<el-image style="margin: 16px 0;" loading="lazy" :preview-src-list="['/img/filterAssociated.jpg']" src="/img/filterAssociated.jpg"/>
 
 <style scoped lang="scss">
 .customFilter {
