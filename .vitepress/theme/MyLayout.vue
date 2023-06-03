@@ -7,6 +7,7 @@ import formEditorConfig from './components/formEditorConfig.vue'
 import filterConfig from './components/filterConfig.vue'
 import formEditorDemo from './components/formEditorDemo.vue'
 import filterDemo from './components/filterDemo.vue'
+import pet from './components/pet.vue'
 const { Layout } = DefaultTheme
 const route = useRoute()
 const router = useRouter()
@@ -76,6 +77,22 @@ watch(route, (newVal) => {
           <filterConfig/>
         </div>
       </div>
+    </template>
+    <template #home-hero-image>
+      <pet
+        :rotateX="-8.75"
+        :rotateY="6.5"
+        :classList="['card', 'border-right-behind', 'border-bottom-behind', 'border-left-behind']"
+        v-if="isRenderFormEditorDemo"
+        img="/img/dog-cutout.png"
+      />
+      <pet
+        :rotateX="-6.75"
+        :rotateY="10"
+        :classList="['card', 'border-top-behind', 'border-left-behind']"
+        v-if="isRenderFilterDemo"
+        img="/img/cat0-cutout.png"
+      />
     </template>
     <template #home-features-before>
       <formEditorDemo v-if="isRenderFormEditorDemo"/>

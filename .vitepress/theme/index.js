@@ -5,6 +5,7 @@ import { reactive, watch } from 'vue'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 import 'element-plus/dist/index.css'
 import 'vant/lib/index.css'
+import './style.scss'
 import MyLayout from './MyLayout.vue'
 import { useRouter, useData } from 'vitepress'
 export default {
