@@ -18,6 +18,9 @@ hero:
     - theme: alt
       text: View on GitHub
       link: https://github.com/Liberty-liu/Everright-filter
+    - theme: alt
+      text: View on Gitee
+      link: https://gitee.com/Liberty_liu/Everright-filter
 
 features:
   - title: 多类型筛选
