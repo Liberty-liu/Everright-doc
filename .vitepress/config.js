@@ -224,6 +224,7 @@ export default defineConfig({
   markdown: {
     lineNumbers: true,
   },
+  title: 'Everright',
   lastUpdated: true,
   head: [
     isProd ? [
@@ -250,18 +251,65 @@ export default defineConfig({
     ]
     // would render: <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   ],
+  transformPageData: (pageData, { siteConfig }) => {
+    const isEn = /^(en\/)/.test(pageData.relativePath)
+    if (/^(en\/)?formEditor\/*/.test(pageData.relativePath)) {
+      pageData.title += `${pageData.title ? '-' : ''}${isEn ? 'Low-code visual form editor' : '低代码可视化表单编辑器'}`
+      pageData.titleTemplate = 'Everright-formEditor'
+      if (isEn) {
+        pageData.description = 'Everright-formEditor is a professional online low-code visual form editor based on Vue, Element Plus, and Vant.  It provides a simple and easy-to-use interface and a rich component library.  Users can quickly create custom forms through drag and drop, configuration, and other methods to meet various business scenario requirements.  It supports both PC and mobile devices, and provides multi-language and multi-platform support to enable users to easily complete form design.  It also provides three components that can be used for different business scenarios.  It comes with comprehensive documentation and usage examples'
+        pageData.frontmatter.head = [
+          [
+            'meta',
+            { name: 'keywords', content: 'Everright-formEditor,vue Forms,Visual Design Forms,vue Dynamic Forms,Low-code Forms,form Design,element form Editor,vant form Editor' }
+          ]
+        ]
+      } else {
+        pageData.description = 'Everright-formEditor是一款基于vue、element-plus、vant专业的在线低代码可视化表单编辑器，提供简单易用的界面和丰富的组件库，用户可以通过拖拽、配置等方式快速创建自定义表单，满足各种业务场景需求。同时支持PC和移动端，提供多语言和多平台的支持，让用户轻松完成表单设计。内部抛出三个组件分别适应不同的业务场景。具有完善的文档和使用案例'
+        pageData.frontmatter.head = [
+          [
+            'meta',
+            { name: 'keywords', content: 'Everright-formEditor,vue表单,可视化设计表单,vue动态表单,低代码表单,表单设计,element form 表单编辑器,vant form 表单编辑器' }
+          ]
+        ]
+      }
+    } else if (/^(en\/)?filter\/*/.test(pageData.relativePath)) {
+      pageData.title += `${pageData.title ? '-' : ''}${isEn ? 'Advanced filter' : '高级筛选器'}`
+      pageData.titleTemplate = 'Everright-filter'
+      if (isEn) {
+        pageData.description = 'Everright-filter is a powerful data filtering tool that supports filtering of multiple data types, including string, number, drop-down, cascade, region, date and time. It provides a wealth of operators, allowing you to flexibly define filtering rules based on specific conditions. Whether it is for time, numbers or other data types, Everright-filter can meet your needs. It also provides a flexible date filtering function, supports the selection of relative time and absolute time, and meets the needs of various time dimensions. The condition grouping setting allows you to combine multiple conditions through logical operators to implement complex data filtering logic. For behavior data, you can precisely filter out behaviors that occurred within a specific time period, and further filter based on frequency and attribute conditions. The flexibility of Everright-filter is also reflected in its embeddability, which can be easily embedded into different UI interfaces, without the need to develop separate filtering functions for different interfaces, saving development resources and time. Developers can easily configure data structures for desired functionality without manual coding and debugging. In addition, Everright-filter also has built-in internationalization support for Chinese and English to meet the needs of different language environments'
+        pageData.frontmatter.head = [
+          [
+            'meta',
+            { name: 'keywords', content: 'Everright-filter,Vue3,Element Plus,Front-end filter,database filter,UI component library,customizable' }
+          ]
+        ]
+      } else {
+        pageData.description = 'Everright-filter是一款强大的数据筛选工具，支持多种数据类型的筛选，包括字符串、数字、下拉、级联、地区、日期和时间。它提供丰富的操作符，让你可以根据具体条件灵活地定义筛选规则。无论是对时间、数字还是其他数据类型，Everright-filter都能满足你的需求。它还提供灵活的日期筛选功能，支持相对时间和绝对时间的选择，满足各种时间维度的需求。条件分组设置让你能够通过逻辑运算符组合多个条件，实现复杂的数据筛选逻辑。针对行为数据，你可以精确地筛选出特定时间段内发生的行为，并根据次数和属性条件进行进一步过滤。Everright-filter的灵活性还体现在它的可嵌入性，可以轻松嵌入到不同的UI界面中，无需为不同界面单独开发筛选功能，节省了开发资源和时间。开发人员可以轻松配置所需功能的数据结构，无需手动编码和调试。此外Everright-filter还内置了中文和英文的国际化支持，满足不同语言环境的需求'
+        pageData.frontmatter.head = [
+          [
+            'meta',
+            { name: 'keywords', content: 'Everright-filter,Vue3,Element Plus,前端筛选器，数据筛选,UI组件库,可定制化' }
+          ]
+        ]
+      }
+    } else {
+      pageData.titleTemplate = 'Everright'
+      // if (/^(en\/)?index\.md$/.test(pageData.relativePath)) {
+      //   // pageData.title = 'Everright-formEditor|Everright-filter'
+      // }
+      if (isEn) {
+        pageData.description = 'The logos of these open source projects Everright-formEditor|Everright-filter come from my pets, they are my daily motivation and endless happiness'
+      } else {
+        pageData.description = '这些开源项目Everright-formEditor|Everright-filter的logo来自我的宠物，他们是我每天的动力和无尽的快乐'
+      }
+    }
+
+  },
   locales: {
     root: {
-      title: 'Everright 低代码可视化表单编辑器',
       label: '中文',
       lang: 'zh-cn',
-      description: 'Everright-formEditor是一款基于vue、element-plus、vant专业的在线低代码可视化表单编辑器，提供简单易用的界面和丰富的组件库，用户可以通过拖拽、配置等方式快速创建自定义表单，满足各种业务场景需求。同时支持PC和移动端，提供多语言和多平台的支持，让用户轻松完成表单设计。内部抛出三个组件分别适应不同的业务场景。具有完善的文档和使用案例',
-      head: [
-        [
-          'meta',
-          { name: 'keywords', content: 'Everright-formEditor,vue表单,可视化设计表单,vue动态表单,低代码表单,表单设计,element form 表单编辑器,vant form 表单编辑器' }
-        ]
-      ],
       themeConfig: {
         nav: [
           { text: 'Home', link: '/' },
@@ -297,17 +345,8 @@ export default defineConfig({
       }
     },
     en: {
-      title: 'Everright Low-code visual form editor',
       label: 'English',
       lang: 'en',
-      // link: '/en/',
-      description: 'Everright-formEditor is a professional online low-code visual form editor based on Vue, Element Plus, and Vant.  It provides a simple and easy-to-use interface and a rich component library.  Users can quickly create custom forms through drag and drop, configuration, and other methods to meet various business scenario requirements.  It supports both PC and mobile devices, and provides multi-language and multi-platform support to enable users to easily complete form design.  It also provides three components that can be used for different business scenarios.  It comes with comprehensive documentation and usage examples',
-      head: [
-        [
-          'meta',
-          { name: 'keywords', content: 'Everright-formEditor,vue Forms,Visual Design Forms,vue Dynamic Forms,Low-code Forms,form Design,element form Editor,vant form Editor' }
-        ]
-      ],
       themeConfig: {
         nav: [
           { text: 'Home', link: '/en/' },

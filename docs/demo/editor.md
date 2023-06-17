@@ -1,5 +1,6 @@
 ---
 layout: false
+title: er-form-editor|Everright-formEditor
 ---
 <script setup>
 import { useData, useRoute, useRouter } from 'vitepress'
@@ -9,9 +10,9 @@ const lang = ref('zh-cn')
 const content = ref('')
 const dialogVisible = ref(false)
 const layoutType = ref(1)
-let ace = '' 
-let aceEditor = '' 
-let isEmpty = '' 
+let ace = ''
+let aceEditor = ''
+let isEmpty = ''
 const EReditorRef = ref(null)
 let erData = {}
 let query = {}
@@ -140,7 +141,7 @@ const handleListener = async ({ type, data }) => {
 }
 .layoutType {
   font-size: 14px;
-  padding-left: 10px; 
+  padding-left: 10px;
   color: red;
 }
 .Everright-formEditor-Main__operation>div:first-child>*,.generateJson {

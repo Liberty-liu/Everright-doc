@@ -1,5 +1,6 @@
 ---
 layout: false
+title: er-form-preview|Everright-formEditor
 head:
 - - meta
   - name: viewport
@@ -13,8 +14,8 @@ const lang = ref('zh-cn')
 const content = ref('')
 const dialogVisible = ref(false)
 const layoutType = ref(1)
-let ace = '' 
-let aceEditor = '' 
+let ace = ''
+let aceEditor = ''
 const EReditorRef = ref(null)
 let erData = {}
 let query = {}

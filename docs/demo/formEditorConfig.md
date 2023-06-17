@@ -1,12 +1,13 @@
 ---
 layout: false
+title: er-form-config|Everright-formEditor
 ---
 <script setup>
 import { ElMessage, ElLoading } from 'element-plus'
 import { ref, onMounted, shallowRef, nextTick, h, reactive, computed } from 'vue'
 import _ from 'lodash-es'
 const lang = ref('zh-cn')
-let aceEditor = '' 
+let aceEditor = ''
 const EReditorRef = ref(null)
 const fieldData = ref({})
 const logicData = ref('{}')
