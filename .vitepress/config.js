@@ -210,6 +210,15 @@ const renderSidebar = (lang = 'zh-cn') => {
       //     items: Object.entries(data).map(([type, value]) => ({ text: value.label, link: `${prefix}/filter/options/${type}` }))
       //   }
       // ]
+    },
+    {
+      text: isZh ? '开发' : 'Development',
+      items: [
+        {
+          text: isZh ? '开发指南' : 'Development Guide',
+          link: `${prefix}/filter/development`
+        }
+      ]
     }
   ]
   result[`${prefix}/filter`] = filterNavs
