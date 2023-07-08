@@ -395,7 +395,7 @@ export default defineConfig({
               }
             ]
           },
-          { text: 'Sponsor', link: 'sponsor' },
+          { text: 'Sponsor', link: '/en/sponsor' },
           { text: 'About me', link: '/en/aboutme' },
         ],
         sidebar: renderSidebar('en')
