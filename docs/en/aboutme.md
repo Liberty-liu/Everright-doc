@@ -1,18 +1,8 @@
 ---
 layout: doc
 ---
+
 # Hi there, I'm 刘海峰 <sup>Liberty</sup>
-
->Next, I will be developing a low-code list and filter feature
-
->Currently, there are many features that have not been added to the Everright-formEditor yet.
-
-| Tables        |        |
-| ------------- | ------------- |
-| Control field display and hiding and logical verification through GUI      |      |
-| History      |   This feature was implemented before, and as the feature changes, it is now broken   |
-
-
 
 - Contact way:
 
@@ -20,18 +10,37 @@ layout: doc
 
   WeChat:liberty001215
 
-### If my code has been useful to you, perhaps you could buy me a cup of coffee. Your support is very helpful to me, and I appreciate it very much. Thank you.
+<VPTeamMembers size="small" :members="members" />
 
-<el-row :gutter="10" justify="space-between" style="margin-top: 30px;">
-  <el-col :span="12">
-    <el-card :body-style="{ padding: '0px' }">
-      <el-image style="width: 100%;" src="/img/Alipay.JPG"/>
-    </el-card>
-  </el-col>
-  <el-col :span="12">
-    <el-card :body-style="{ padding: '0px' }">
-      <el-image style="width: 100%;" src="/img/WeChatPay.JPG"/>
-    </el-card>
-  </el-col>
-</el-row>
+<br/>
+
+# Next step
+
+1. The mobile side of the filter is currently being developed, based on vant.
+2. Currently, there are many features that have not been added to the Everright-formEditor yet.
+
+| Tables         |
+|----------------|
+| subform        |
+| tree hierarchy |
+
+<script setup>
+import {
+  VPTeamMembers
+} from 'vitepress/theme'
+const members = [
+  {
+    avatar: 'https://github.com/Liberty-liu.png',
+    name: 'Liberty',
+    title: 'Creator',
+    links: [
+      { icon: 'github', link: 'https://github.com/Liberty-liu' }
+    ],
+    sponsor: 'https://afdian.net/a/Liberty-liu',
+    desc: `
+    `
+  }
+]
+</script>
+
 

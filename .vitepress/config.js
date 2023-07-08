@@ -343,12 +343,18 @@ export default defineConfig({
                 link: 'filter/introduction'
               },
               {
+                text: '移动端',
+                link: '/filter-mobile/introduction'
+              },
+              {
                 text: '文档',
                 link: 'filter/doc'
               }
             ]
           },
-          { text: 'About me', link: 'aboutme' },
+          { text: '技术交流群', link: 'chatgroup' },
+          { text: '赞助', link: 'sponsor' },
+          { text: 'About me', link: 'aboutme' }
         ],
         sidebar: renderSidebar()
       }
@@ -380,11 +386,16 @@ export default defineConfig({
                 link: 'en/filter/introduction'
               },
               {
+                text: 'Mobile',
+                link: 'en/filter-mobile/introduction'
+              },
+              {
                 text: 'Documentation',
                 link: 'en/filter/doc'
               }
             ]
           },
+          { text: 'Sponsor', link: 'sponsor' },
           { text: 'About me', link: '/en/aboutme' },
         ],
         sidebar: renderSidebar('en')

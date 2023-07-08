@@ -2,6 +2,8 @@
 import type { DefaultTheme } from 'vitepress/theme'
 import VPLink from 'vitepress/dist/client/theme-default/components/VPLink.vue'
 import VPSocialLinks from 'vitepress/dist/client/theme-default/components/VPSocialLinks.vue'
+// import VPIconHeart from './icons/VPIconHeart.vue'
+import VPIconHeart from 'vitepress/dist/client/theme-default/components/icons/VPIconHeart.vue'
 defineProps<{
   size?: 'small' | 'medium'
   member: DefaultTheme.TeamMember
@@ -34,6 +36,11 @@ defineProps<{
           <VPSocialLinks :links="member.links" />
         </div>
       </div>
+    </div>
+    <div v-if="member.sponsor" class="sp">
+      <VPLink class="sp-link" :href="member.sponsor" no-icon>
+        <VPIconHeart class="sp-icon" /> Sponsor
+      </VPLink>
     </div>
   </article>
 </template>
