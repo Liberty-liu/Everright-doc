@@ -93,6 +93,11 @@ watch(route, (newVal) => {
         v-if="isRenderFilterDemo"
         img="/img/cat0-cutout.png"
       />
+      <el-row justify="center" v-if="/(\/filter-mobile\/introduction.html){1}/.test(route.path)">
+        <el-col :span="16">
+          <el-image style="width: 100%;" src="/img/Everright-filter-mobile.png"/>
+        </el-col>
+      </el-row>
     </template>
     <template #home-features-before>
       <formEditorDemo v-if="isRenderFormEditorDemo"/>

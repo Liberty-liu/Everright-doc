@@ -18,6 +18,9 @@ hero:
     - theme: alt
       text: View on GitHub
       link: https://github.com/Liberty-liu/Everright-filter
+    - theme: alt
+      text: Everright-filter-mobile
+      link: en/filter-mobile/introduction
 
 features:
   - title: Multi-type filter

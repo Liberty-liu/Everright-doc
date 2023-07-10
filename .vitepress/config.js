@@ -352,6 +352,10 @@ export default defineConfig({
               }
             ]
           },
+          {
+            text: 'Everright-filter-mobile',
+            link: 'filter-mobile/introduction'
+          },
           { text: '技术交流群', link: 'chatgroup' },
           { text: '赞助', link: 'sponsor' },
           { text: 'About me', link: 'aboutme' }
@@ -386,14 +390,14 @@ export default defineConfig({
                 link: 'en/filter/introduction'
               },
               {
-                text: 'Mobile',
-                link: 'en/filter-mobile/introduction'
-              },
-              {
                 text: 'Documentation',
                 link: 'en/filter/doc'
               }
             ]
+          },
+          {
+            text: 'Everright-filter-mobile',
+            link: 'en/filter-mobile/introduction'
           },
           { text: 'Sponsor', link: '/en/sponsor' },
           { text: 'About me', link: '/en/aboutme' },

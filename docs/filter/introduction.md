@@ -21,6 +21,9 @@ hero:
     - theme: alt
       text: View on Gitee
       link: https://gitee.com/Liberty_liu/Everright-filter
+    - theme: alt
+      text: Everright-filter-mobile
+      link: /filter-mobile/introduction
 
 features:
   - title: 多类型筛选
