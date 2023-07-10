@@ -343,10 +343,6 @@ export default defineConfig({
                 link: 'filter/introduction'
               },
               {
-                text: '移动端',
-                link: '/filter-mobile/introduction'
-              },
-              {
                 text: '文档',
                 link: 'filter/doc'
               }
