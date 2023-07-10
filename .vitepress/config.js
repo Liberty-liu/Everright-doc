@@ -286,19 +286,19 @@ export default defineConfig({
       pageData.title += `${pageData.title ? '-' : ''}${isEn ? 'Advanced filter' : '高级筛选器'}`
       pageData.titleTemplate = 'Everright-filter'
       if (isEn) {
-        pageData.description = 'Everright-filter is a powerful data filtering tool that supports filtering of multiple data types, including string, number, drop-down, cascade, region, date and time. It provides a wealth of operators, allowing you to flexibly define filtering rules based on specific conditions. Whether it is for time, numbers or other data types, Everright-filter can meet your needs. It also provides a flexible date filtering function, supports the selection of relative time and absolute time, and meets the needs of various time dimensions. The condition grouping setting allows you to combine multiple conditions through logical operators to implement complex data filtering logic. For behavior data, you can precisely filter out behaviors that occurred within a specific time period, and further filter based on frequency and attribute conditions. The flexibility of Everright-filter is also reflected in its embeddability, which can be easily embedded into different UI interfaces, without the need to develop separate filtering functions for different interfaces, saving development resources and time. Developers can easily configure data structures for desired functionality without manual coding and debugging. In addition, Everright-filter also has built-in internationalization support for Chinese and English to meet the needs of different language environments'
+        pageData.description = 'Everright-filter is a powerful data filtering tool based on vue, element-plus. that supports filtering of multiple data types, including string, number, drop-down, cascade, region, date and time. It provides a wealth of operators, allowing you to flexibly define filtering rules based on specific conditions. Whether it is for time, numbers or other data types, Everright-filter can meet your needs. It also provides a flexible date filtering function, supports the selection of relative time and absolute time, and meets the needs of various time dimensions. The condition grouping setting allows you to combine multiple conditions through logical operators to implement complex data filtering logic. For behavior data, you can precisely filter out behaviors that occurred within a specific time period, and further filter based on frequency and attribute conditions. The flexibility of Everright-filter is also reflected in its embeddability, which can be easily embedded into different UI interfaces, without the need to develop separate filtering functions for different interfaces, saving development resources and time. Developers can easily configure data structures for desired functionality without manual coding and debugging. In addition, Everright-filter also has built-in internationalization support for Chinese and English to meet the needs of different language environments'
         pageData.frontmatter.head = [
           [
             'meta',
-            { name: 'keywords', content: 'Everright-filter,Vue3,Element Plus,Front-end filter,database filter,UI component library,customizable' }
+            { name: 'keywords', content: 'Everright-filter,Vue3,Element Plus,Front-end filter,database filter,UI component library,customizable,vue filter' }
           ]
         ]
       } else {
-        pageData.description = 'Everright-filter是一款强大的数据筛选工具，支持多种数据类型的筛选，包括字符串、数字、下拉、级联、地区、日期和时间。它提供丰富的操作符，让你可以根据具体条件灵活地定义筛选规则。无论是对时间、数字还是其他数据类型，Everright-filter都能满足你的需求。它还提供灵活的日期筛选功能，支持相对时间和绝对时间的选择，满足各种时间维度的需求。条件分组设置让你能够通过逻辑运算符组合多个条件，实现复杂的数据筛选逻辑。针对行为数据，你可以精确地筛选出特定时间段内发生的行为，并根据次数和属性条件进行进一步过滤。Everright-filter的灵活性还体现在它的可嵌入性，可以轻松嵌入到不同的UI界面中，无需为不同界面单独开发筛选功能，节省了开发资源和时间。开发人员可以轻松配置所需功能的数据结构，无需手动编码和调试。此外Everright-filter还内置了中文和英文的国际化支持，满足不同语言环境的需求'
+        pageData.description = 'Everright-filter是一款强大的数据筛选工具，基于vue、element-plus。支持多种数据类型的筛选，包括字符串、数字、下拉、级联、地区、日期和时间。它提供丰富的操作符，让你可以根据具体条件灵活地定义筛选规则。无论是对时间、数字还是其他数据类型，Everright-filter都能满足你的需求。它还提供灵活的日期筛选功能，支持相对时间和绝对时间的选择，满足各种时间维度的需求。条件分组设置让你能够通过逻辑运算符组合多个条件，实现复杂的数据筛选逻辑。针对行为数据，你可以精确地筛选出特定时间段内发生的行为，并根据次数和属性条件进行进一步过滤。Everright-filter的灵活性还体现在它的可嵌入性，可以轻松嵌入到不同的UI界面中，无需为不同界面单独开发筛选功能，节省了开发资源和时间。开发人员可以轻松配置所需功能的数据结构，无需手动编码和调试。此外Everright-filter还内置了中文和英文的国际化支持，满足不同语言环境的需求'
         pageData.frontmatter.head = [
           [
             'meta',
-            { name: 'keywords', content: 'Everright-filter,Vue3,Element Plus,前端筛选器，数据筛选,UI组件库,可定制化' }
+            { name: 'keywords', content: 'Everright-filter,Vue3,Element Plus,前端筛选器,数据筛选,UI组件库,可定制化,vue filter' }
           ]
         ]
       }
