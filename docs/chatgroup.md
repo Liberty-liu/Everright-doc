@@ -1,5 +1,6 @@
 ---
 layout: doc
+lastUpdated: false
 ---
 # 技术交流群
 >组织了一个低代码群,欢迎一块讨论技术。

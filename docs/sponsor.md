@@ -1,5 +1,6 @@
 ---
 layout: doc
+lastUpdated: false
 ---
 # 赞助
 Everright-formEditor和Everright-filter都是免费开源的项目。

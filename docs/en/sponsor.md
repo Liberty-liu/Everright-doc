@@ -1,5 +1,6 @@
 ---
 layout: doc
+lastUpdated: false
 ---
 # Sponsor
 Both Everright-formEditor and Everright-filter are free and open source projects.
