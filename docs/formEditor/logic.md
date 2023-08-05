@@ -3,7 +3,7 @@ outline: deep
 ---
 # 逻辑控制器
 
-Everright-formEditor的逻辑控制器内部的筛选器部分依赖Everright-filter完成的，目前文档还在完善中....
+Everright-formEditor的逻辑控制器内部的筛选器部分依赖[Everright-filter](/filter/introduction)
 
 ::: tip
 当字段结构发生变动，为了保证逻辑控制的准确性，自动删除相应的逻辑规则。[点此查看实现逻辑](https://github.com/Liberty-liu/Everright-formEditor/blob/main/packages/utils/logic.js)
@@ -54,7 +54,7 @@ Everright-formEditor的逻辑控制器内部的筛选器部分依赖Everright-fi
 | Cascader  | :white_check_mark: | :white_check_mark:| | | | | | | | | | | | :white_check_mark: | :white_check_mark: |
 | File  |  | | | | | | | | | | | | |:white_check_mark: |:white_check_mark: |
 | Signature  |  | | | | | | | | | | | | |:white_check_mark: |:white_check_mark: |
-| Region  |  | | | | | | | | |:white_check_mark: | :white_check_mark:| :white_check_mark:| :white_check_mark:| :white_check_mark:| :white_check_mark:| 
+| Region  |  | | | | | | | | |:white_check_mark: | :white_check_mark:| :white_check_mark:| :white_check_mark:| :white_check_mark:| :white_check_mark:|
 
 
 
