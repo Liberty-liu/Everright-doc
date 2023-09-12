@@ -161,7 +161,7 @@ Operate the configuration panel on the right to define the filter, and click the
 | :---- | :---- | :-- |
 | renderType | Configure the UI type | CASCADER,SELECT,REGION,TEXT,NUMBER,TIME,DATE,NONE |
 | operatorKey | operator id, defines operator data | - |
-| excludeOperator or includeOperator | Exclude or include operators and date operators | <ClientOnly><el-tooltip content="{dateOperator: ['date', 'year', 'month', 'day'], operator: []}" placement="bottom" effect="light"><el-button link><el-icon><Warning /></el-icon></el-button></el-tooltip></ClientOnly> |
+| excludeOperator or includeOperator | Exclude or include operators and date operators | <ClientOnly><el-tooltip content="{dateOperator: ['date', 'year', 'month', 'day'], operator: []}" placement="bottom" effect="light"><el-button link><el-icon><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" data-v-ea893728=""><path fill="currentColor" d="M512 64a448 448 0 1 1 0 896 448 448 0 0 1 0-896zm0 832a384 384 0 0 0 0-768 384 384 0 0 0 0 768zm48-176a48 48 0 1 1-96 0 48 48 0 0 1 96 0zm-48-464a32 32 0 0 1 32 32v288a32 32 0 0 1-64 0V288a32 32 0 0 1 32-32z"></path></svg></el-icon></el-button></el-tooltip></ClientOnly> |
 
 
 
@@ -187,8 +187,8 @@ Operate the configuration panel on the right to define the filter, and click the
 | :---- | :---- | :-- | :-- |
 | manualType | Define a manual relative date (day or hour) |1 = days 2 = hours 3 = can choose the hours or days | 3|
 | pickerType | Define date-picker type please check [element-plus date-picker type](https://element-plus.gitee.io/en-US/component/date-picker.html#attributes) | ['date', 'dates', 'dates', 'datetime', 'daterange'] | date |
-| excludeShortcuts | Exclude shortcut options | <ClientOnly><el-tooltip content="{today_today: 'Today',today_thisWeek: 'This Week',today_thisMonth: 'This Month',today_thisYear: 'This Year',yesterday_onlineToday: 'Released So Far',yesterday_yesterday: 'Yesterday',yesterday_lastWeek: 'Last Week',yesterday_lastMonth: 'Last Month',yesterday_lastYear: 'Last Year',}" placement="bottom" effect="light"><el-button link><el-icon><Warning /></el-icon></el-button></el-tooltip></ClientOnly> | - |
-| excludeManuals | Exclude manual relative dates | <ClientOnly><el-tooltip content="['intervalBefore', 'afterBefore', 'erenowBefore', 'intervalBetween']" placement="bottom" effect="light"><el-button link><el-icon><Warning /></el-icon></el-button></el-tooltip></ClientOnly> | - |
+| excludeShortcuts | Exclude shortcut options | <ClientOnly><el-tooltip content="{today_today: 'Today',today_thisWeek: 'This Week',today_thisMonth: 'This Month',today_thisYear: 'This Year',yesterday_onlineToday: 'Released So Far',yesterday_yesterday: 'Yesterday',yesterday_lastWeek: 'Last Week',yesterday_lastMonth: 'Last Month',yesterday_lastYear: 'Last Year',}" placement="bottom" effect="light"><el-button link><el-icon><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" data-v-ea893728=""><path fill="currentColor" d="M512 64a448 448 0 1 1 0 896 448 448 0 0 1 0-896zm0 832a384 384 0 0 0 0-768 384 384 0 0 0 0 768zm48-176a48 48 0 1 1-96 0 48 48 0 0 1 96 0zm-48-464a32 32 0 0 1 32 32v288a32 32 0 0 1-64 0V288a32 32 0 0 1 32-32z"></path></svg></el-icon></el-button></el-tooltip></ClientOnly> | - |
+| excludeManuals | Exclude manual relative dates | <ClientOnly><el-tooltip content="['intervalBefore', 'afterBefore', 'erenowBefore', 'intervalBetween']" placement="bottom" effect="light"><el-button link><el-icon><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" data-v-ea893728=""><path fill="currentColor" d="M512 64a448 448 0 1 1 0 896 448 448 0 0 1 0-896zm0 832a384 384 0 0 0 0-768 384 384 0 0 0 0 768zm48-176a48 48 0 1 1-96 0 48 48 0 0 1 96 0zm-48-464a32 32 0 0 1 32 32v288a32 32 0 0 1-64 0V288a32 32 0 0 1 32-32z"></path></svg></el-icon></el-button></el-tooltip></ClientOnly> | - |
 
 ### Association graph
 

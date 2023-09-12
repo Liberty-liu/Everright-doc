@@ -160,7 +160,7 @@ const handleListener = ({ type, data }) => {
 | :---- | :---- | :-- |
 | renderType | 配置UI类型 | CASCADER,SELECT,REGION,TEXT,NUMBER,TIME,DATE,NONE |
 | operatorKey | 操作符id，定义操作符数据 | - |
-| excludeOperator or includeOperator | 排除或者包含操作符和日期操作符 | <ClientOnly><el-tooltip content="{dateOperator: ['date', 'year', 'month', 'day'], operator: []}" placement="bottom" effect="light"><el-button link><el-icon><Warning /></el-icon></el-button></el-tooltip></ClientOnly> |
+| excludeOperator or includeOperator | 排除或者包含操作符和日期操作符 | <ClientOnly><el-tooltip content="{dateOperator: ['date', 'year', 'month', 'day'], operator: []}" placement="bottom" effect="light"><el-button link><el-icon><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" data-v-ea893728=""><path fill="currentColor" d="M512 64a448 448 0 1 1 0 896 448 448 0 0 1 0-896zm0 832a384 384 0 0 0 0-768 384 384 0 0 0 0 768zm48-176a48 48 0 1 1-96 0 48 48 0 0 1 96 0zm-48-464a32 32 0 0 1 32 32v288a32 32 0 0 1-64 0V288a32 32 0 0 1 32-32z"></path></svg></el-icon></el-button></el-tooltip></ClientOnly> |
 
 
 
@@ -186,8 +186,8 @@ const handleListener = ({ type, data }) => {
 | :---- | :---- | :-- | :-- |
 | manualType | 定义手动相对日期（天or时） |1 = days 2 = hours 3 = can choose the hours or days | 3|
 | pickerType | 定义date-picker type 请查看 [element-plus date-picker type](https://element-plus.gitee.io/en-US/component/date-picker.html#attributes) | ['date', 'dates', 'dates', 'datetime', 'daterange'] | date |
-| excludeShortcuts | 排除快捷选项 | <ClientOnly><el-tooltip content="{today_today: '今日',today_thisWeek: '本周',today_thisMonth: '本月',today_thisYear: '今年',yesterday_onlineToday: '上线至今',yesterday_yesterday: '昨日',yesterday_lastWeek: '上周',yesterday_lastMonth: '上月',yesterday_lastYear: '去年',}" placement="bottom" effect="light"><el-button link><el-icon><Warning /></el-icon></el-button></el-tooltip></ClientOnly> | - |
-| excludeManuals | 排除手动相对日期 | <ClientOnly><el-tooltip content="['intervalBefore', 'afterBefore', 'erenowBefore', 'intervalBetween']" placement="bottom" effect="light"><el-button link><el-icon><Warning /></el-icon></el-button></el-tooltip></ClientOnly> | - |
+| excludeShortcuts | 排除快捷选项 | <ClientOnly><el-tooltip content="{today_today: '今日',today_thisWeek: '本周',today_thisMonth: '本月',today_thisYear: '今年',yesterday_onlineToday: '上线至今',yesterday_yesterday: '昨日',yesterday_lastWeek: '上周',yesterday_lastMonth: '上月',yesterday_lastYear: '去年',}" placement="bottom" effect="light"><el-button link><el-icon><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" data-v-ea893728=""><path fill="currentColor" d="M512 64a448 448 0 1 1 0 896 448 448 0 0 1 0-896zm0 832a384 384 0 0 0 0-768 384 384 0 0 0 0 768zm48-176a48 48 0 1 1-96 0 48 48 0 0 1 96 0zm-48-464a32 32 0 0 1 32 32v288a32 32 0 0 1-64 0V288a32 32 0 0 1 32-32z"></path></svg></el-icon></el-button></el-tooltip></ClientOnly> | - |
+| excludeManuals | 排除手动相对日期 | <ClientOnly><el-tooltip content="['intervalBefore', 'afterBefore', 'erenowBefore', 'intervalBetween']" placement="bottom" effect="light"><el-button link><el-icon><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" data-v-ea893728=""><path fill="currentColor" d="M512 64a448 448 0 1 1 0 896 448 448 0 0 1 0-896zm0 832a384 384 0 0 0 0-768 384 384 0 0 0 0 768zm48-176a48 48 0 1 1-96 0 48 48 0 0 1 96 0zm-48-464a32 32 0 0 1 32 32v288a32 32 0 0 1-64 0V288a32 32 0 0 1 32-32z"></path></svg></el-icon></el-button></el-tooltip></ClientOnly> | - |
 
 ### Association graph
 
