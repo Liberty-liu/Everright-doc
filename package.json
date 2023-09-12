@@ -16,11 +16,10 @@
     "postcss": "^8.4.24"
   },
   "dependencies": {
-    "@element-plus/icons-vue": "^2.1.0",
     "ace-builds": "^1.16.0",
     "element-plus": "^2.3.2",
     "everright-filter": "^1.0.0",
-    "everright-formeditor": "^1.1.1",
+    "everright-formeditor": "^1.2.1",
     "lodash-es": "^4.17.21",
     "query-string": "^8.1.0",
     "sass": "^1.61.0",

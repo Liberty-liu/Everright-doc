@@ -266,37 +266,38 @@ erFormEditor组件提供了两种模式进行对字段和布局结构的控制�
 ## **3.API**
 
 ### **Attributes**
-| 名称        |      类型      |  说明 | 可选值 |  默认值 |
-| :---- | :-- | :---- | :---- | :--------- |
-| `fieldsConfig`      | Array | 定义字段面板| - | [(默认值)](https://github.com/Liberty-liu/Everright-formEditor/blob/main/packages/formEditor/componentsConfig.js) |
-| `globalConfig`      | Object | 定义表单配置 | - |[(默认值)](https://github.com/Liberty-liu/Everright-formEditor/blob/main/packages/formEditor/componentsConfig.js) |
-| `lang` | String  | i18n | zh-cn\|en | zh-cn |
-| `layoutType` | Number  | 定义字段与布局是否分离 | 1\|2 | 1 |
-| `fileUploadURI` | String  | 图片、文件上传接口 | - | - |
-| `fieldsPanelWidth` | String  | 定义字段面板的宽度 | - | 220px |
-| `fieldsPanelDefaultOpeneds` | Array  | 字段面板默认展开 | - | <ClientOnly><el-tooltip content="['defaultField', 'field', 'container']" placement="bottom" effect="light"><el-button link><el-icon><Warning /></el-icon></el-button></el-tooltip></ClientOnly> |
-| `configPanelWidth` | String  | 定义属性面板的宽度 | - | 320px |
+| 名称        |      类型      | 说明                | 可选值 |  默认值 |
+| :---- | :-- |:------------------| :---- | :--------- |
+| `fieldsConfig`      | Array | 定义字段面板            | - | [(默认值)](https://github.com/Liberty-liu/Everright-formEditor/blob/main/packages/formEditor/componentsConfig.js) |
+| `globalConfig`      | Object | 定义表单配置            | - |[(默认值)](https://github.com/Liberty-liu/Everright-formEditor/blob/main/packages/formEditor/componentsConfig.js) |
+| `lang` | String  | i18n              | zh-cn\|en | zh-cn |
+| `layoutType` | Number  | 定义字段与布局是否分离       | 1\|2 | 1 |
+| `fileUploadURI` | String  | 图片、文件上传接口         | - | - |
+| `fieldsPanelWidth` | String  | 定义字段面板的宽度         | - | 220px |
+| `fieldsPanelDefaultOpeneds` | Array  | 字段面板默认展开          | - | <ClientOnly><el-tooltip content="['defaultField', 'field', 'container']" placement="bottom" effect="light"><el-button link><el-icon><Warning /></el-icon></el-button></el-tooltip></ClientOnly> |
+| `configPanelWidth` | String  | 定义属性面板的宽度         | - | 320px |
 | `isShowCompleteButton` | Boolean  | 是否在表单配置显示提交按钮配置选项 | true\|false  | true |
-| `checkPropsBySelected` | function (selected, propType) {}  | 是否显示config面板的属性 | - | - |
-| `quickImages` | Array  | 定义设置背景图片的快捷选项 | <ClientOnly><el-tooltip content="['/public/Everright-logo.svg','/public/Everright-logo.svg','/public/Everright-logo.svg']" placement="bottom" effect="light"><el-button link><el-icon><Warning /></el-icon></el-button></el-tooltip></ClientOnly> | [] |
-| `quickImageLimit` | Number  | 上传图片最多在快捷面板显示个数 | - | 5 |
-| `quickColors` |  Array | 定义设置背景颜色的快捷选项 | - | <ClientOnly><el-tooltip content="['/public/Everright-logo.svg','/public/Everright-logo.svg','/public/Everright-logo.svg']" placement="bottom" effect="light"><el-button link><el-icon><Warning /></el-icon></el-button></el-tooltip></ClientOnly> |
-| `delHandle` | function (selected) {} return false会拦截此次操作  | 删除拦截函数 | - |- |
-| `copyHandle` | function (selected) {} return false会拦截此次操作  | 复制拦截函数 | - |- |
-| `inlineMax` | Number  | 每行最多可放入个数 | - | 4 |
-| `isShowClear` | Boolean  | 是否显示清空按钮 | true\|false | true |
-| `isShowI18n` | Boolean  | 是否显示i18n按钮 | true\|false | true |
+| `checkPropsBySelected` | function (selected, propType) {}  | 是否显示config面板的属性   | - | - |
+| `quickImages` | Array  | 定义设置背景图片的快捷选项     | <ClientOnly><el-tooltip content="['/public/Everright-logo.svg','/public/Everright-logo.svg','/public/Everright-logo.svg']" placement="bottom" effect="light"><el-button link><el-icon><Warning /></el-icon></el-button></el-tooltip></ClientOnly> | [] |
+| `quickImageLimit` | Number  | 上传图片最多在快捷面板显示个数   | - | 5 |
+| `quickColors` |  Array | 定义设置背景颜色的快捷选项     | - | <ClientOnly><el-tooltip content="['/public/Everright-logo.svg','/public/Everright-logo.svg','/public/Everright-logo.svg']" placement="bottom" effect="light"><el-button link><el-icon><Warning /></el-icon></el-button></el-tooltip></ClientOnly> |
+| `delHandle` | function (selected) {} return false会拦截此次操作  | 删除拦截函数            | - |- |
+| `copyHandle` | function (selected) {} return false会拦截此次操作  | 复制拦截函数            | - |- |
+| `inlineMax` | Number  | 每行最多可放入个数         | - | 4 |
+| `isShowClear` | Boolean  | 是否显示清空按钮          | true\|false | true |
+| `isShowI18n` | Boolean  | 是否显示i18n按钮        | true\|false | true |
+| `checkFieldsForNewBadge` | function (field) {}   | 为字段面板某个元素加new徽章   | true\|false |false |
 
 ### **Slots**
-| 名称  |      说明      | 
-| :---- | :-- | 
-| operation-left | 操作区域左侧部分 | 
-| operation-right | 操作区域右侧部分 | 
+| 名称  |      说明      |
+| :---- | :-- |
+| operation-left | 操作区域左侧部分 |
+| operation-right | 操作区域右侧部分 |
 
 ### **Event**
-| 事件名称  |      说明      | 
-| :---- | :-- | 
-| listener | 编辑器内部所有事件都通过该事件发送，根据type区分 | 
+| 事件名称  |      说明      |
+| :---- | :-- |
+| listener | 编辑器内部所有事件都通过该事件发送，根据type区分 |
 
 type:
 - **changeParams**
@@ -323,6 +324,6 @@ type:
 
 | 名称  | 说明| 参数|
 | :---- | :-- | :-- |
-| switchPlatform | 设置pc/mobile | pc\|mobile | 
-| getData | 获取数据，内部会校验用户填写的ID是否唯一 | - | 
-| setData | 设置数据 | - | 
+| switchPlatform | 设置pc/mobile | pc\|mobile |
+| getData | 获取数据，内部会校验用户填写的ID是否唯一 | - |
+| setData | 设置数据 | - |

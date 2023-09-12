@@ -66,10 +66,13 @@ const findDataByurl = (path) => {
     default:
       if (erUtils.checkIsField({
         type: path
-      })) {
+      }) && path !== 'subform') {
         result = _.find(fileds, { type: path })
       } else {
         result = _.find(layouts, { type: path.includes('>') ? path.split('>')[0] : path })
+        if (path === 'subform') {
+          result.list[0].push(erGeneratorData(erComponentsConfig.fieldsConfig[1].list[0], true, site.value.lang))
+        }
       }
   }
   return erGeneratorData(result, true, site.value.lang)

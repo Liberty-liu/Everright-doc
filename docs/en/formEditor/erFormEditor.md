@@ -286,17 +286,18 @@ erFormEditor component provides two modes for controlling the fields and layout 
 | `inlineMax` | Number  | Maximum number of items per row | - | 4 |
 | `isShowClear` | Boolean  | Whether to display the clear button | true\|false | true |
 | `isShowI18n` | Boolean  | Whether to display the i18n button | true\|false | true |
+| `checkFieldsForNewBadge` | function (field) {}   | Through the checkFieldsForNewBadge function, a new badge can be added to a certain element in the fields panel.   | true\|false |false |
 
 ### **Slots**
-| Name  |      Description      | 
-| :---- | :-- | 
-| operation-left | The left side of the operation area | 
-| operation-right | The right side of the operation area | 
+| Name  |      Description      |
+| :---- | :-- |
+| operation-left | The left side of the operation area |
+| operation-right | The right side of the operation area |
 
 ### **Event**
-| Name  |      Description      | 
-| :---- | :-- | 
-| listener | All events within the editor are sent through this event, differentiated by type | 
+| Name  |      Description      |
+| :---- | :-- |
+| listener | All events within the editor are sent through this event, differentiated by type |
 
 type:
 - **changeParams**
@@ -322,6 +323,6 @@ type:
 
 | Name  | Description| Parameters|
 | :---- | :-- | :-- |
-| switchPlatform | Set pc/mobile | pc\|mobile | 
-| getData | Get data, with internal validation for unique IDs entered by user. | - | 
-| setData | Set data | - | 
+| switchPlatform | Set pc/mobile | pc\|mobile |
+| getData | Get data, with internal validation for unique IDs entered by user. | - |
+| setData | Set data | - |

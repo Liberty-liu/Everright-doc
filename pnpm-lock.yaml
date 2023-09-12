@@ -1,12 +1,11 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@element-plus/icons-vue': ^2.1.0
   ace-builds: ^1.16.0
   autoprefixer: ^10.4.14
   element-plus: ^2.3.2
   everright-filter: ^1.0.0
-  everright-formeditor: ^1.1.1
+  everright-formeditor: ^1.2.1
   flexsearch: ^0.7.31
   lodash-es: ^4.17.21
   markdown-it: ^13.0.1
@@ -18,11 +17,10 @@ specifiers:
   vue: ^3.3.4
 
 dependencies:
-  '@element-plus/icons-vue': 2.1.0_vue@3.3.4
   ace-builds: 1.16.0
   element-plus: 2.3.2_vue@3.3.4
   everright-filter: 1.0.0_qw2uepif34ifeagihpzqryubwm
-  everright-formeditor: 1.1.1_bofmn2qmx6xnm7pjj6sszp5mgq
+  everright-formeditor: 1.2.1_bofmn2qmx6xnm7pjj6sszp5mgq
   lodash-es: 4.17.21
   query-string: 8.1.0
   sass: 1.61.0
@@ -916,7 +914,7 @@ packages:
       normalize-path: 3.0.0
       readdirp: 3.6.0
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: 2.3.3
     dev: false
 
   /chownr/2.0.0:
@@ -1153,30 +1151,6 @@ packages:
     resolution: {integrity: sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w==}
     dev: false
 
-  /everright-filter/0.0.22_qw2uepif34ifeagihpzqryubwm:
-    resolution: {integrity: sha512-wVKk4FCgB1G6owZwByz/wFqeQ3Gx2UzIVqd2OwElizxaT7fX2n/KpghE5gs6YiyenupQZRfsxCv2Ou77UFNJCw==}
-    peerDependencies:
-      element-plus: ^2.2.28
-      vue: ^3.2.45
-    dependencies:
-      '@vant/area-data': 1.4.1
-      '@vue/shared': 3.2.47
-      '@vuelidate/core': 2.0.2_vue@3.3.4
-      '@vuelidate/validators': 2.0.2_vue@3.3.4
-      async: 3.2.4
-      axios: 1.4.0
-      element-plus: 2.3.2_vue@3.3.4
-      lodash-es: 4.17.21
-      nzh: 1.0.8
-      vue: 3.3.4
-      vue-router: 4.2.1_vue@3.3.4
-      vuedraggable: 4.1.0_vue@3.3.4
-      written-number: 0.11.1
-    transitivePeerDependencies:
-      - '@vue/composition-api'
-      - debug
-    dev: false
-
   /everright-filter/1.0.0_qw2uepif34ifeagihpzqryubwm:
     resolution: {integrity: sha512-r3IQY3vu0F6xlnvTL5US+pmw/k30qDhL+Z59PjeHN8PM5aDG6HCXKfgVeWJlyj+lCzGaXeH1J2RZgUtj5gSPvQ==}
     peerDependencies:
@@ -1199,8 +1173,30 @@ packages:
       - debug
     dev: false
 
-  /everright-formeditor/1.1.1_bofmn2qmx6xnm7pjj6sszp5mgq:
-    resolution: {integrity: sha512-OJcDJN31xeLZ47Q8pP6qR3ILpLUDY6LgiE/xxlZa3ju7AfBHveTEiulFgaTFgBts57UpziHeCh87EIwoCr3XXg==}
+  /everright-filter/1.1.1_qw2uepif34ifeagihpzqryubwm:
+    resolution: {integrity: sha512-xQGZ15FcLVw8ja54JiL6nLlvMdviGXketkNwUtfzV+Hvxt0cgr10bKZcaEES1aGzfw+qo5W6c5s1bVebdCL66g==}
+    peerDependencies:
+      element-plus: ^2.2.28
+      vue: ^3.2.45
+    dependencies:
+      '@vant/area-data': 1.4.1
+      '@vue/shared': 3.2.47
+      '@vuelidate/core': 2.0.2_vue@3.3.4
+      '@vuelidate/validators': 2.0.2_vue@3.3.4
+      async: 3.2.4
+      axios: 1.4.0
+      element-plus: 2.3.2_vue@3.3.4
+      lodash-es: 4.17.21
+      nzh: 1.0.8
+      vue: 3.3.4
+      written-number: 0.11.1
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - debug
+    dev: false
+
+  /everright-formeditor/1.2.1_bofmn2qmx6xnm7pjj6sszp5mgq:
+    resolution: {integrity: sha512-YFVQP6l0HnClMGMdeIfvI3y3GvorTW+whV7IEIuqKqSCovmHuHfa3YyuNFysWTIgyCLIEJqkhaXGYYDfwaL5Dw==}
     peerDependencies:
       element-plus: ^2.2.28
       vant: ^4.0.8
@@ -1216,7 +1212,7 @@ packages:
       canvas: 2.11.2
       dayjs: 1.11.7
       element-plus: 2.3.2_vue@3.3.4
-      everright-filter: 0.0.22_qw2uepif34ifeagihpzqryubwm
+      everright-filter: 1.1.1_qw2uepif34ifeagihpzqryubwm
       jss: 10.10.0
       jss-preset-default: 10.10.0
       lodash-es: 4.17.21
@@ -1290,8 +1286,8 @@ packages:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
     dev: false
 
-  /fsevents/2.3.2:
-    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
+  /fsevents/2.3.3:
+    resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
     requiresBuild: true
@@ -1813,7 +1809,7 @@ packages:
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
     hasBin: true
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: 2.3.3
     dev: false
 
   /safe-buffer/5.2.1:
@@ -2031,7 +2027,7 @@ packages:
       rollup: 3.23.0
       sass: 1.61.0
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: 2.3.3
     dev: false
 
   /vitepress/1.0.0-beta.1_sass@1.61.0:
@@ -2111,15 +2107,6 @@ packages:
       '@vue/composition-api':
         optional: true
     dependencies:
-      vue: 3.3.4
-    dev: false
-
-  /vue-router/4.2.1_vue@3.3.4:
-    resolution: {integrity: sha512-nW28EeifEp8Abc5AfmAShy5ZKGsGzjcnZ3L1yc2DYUo+MqbBClrRP9yda3dIekM4I50/KnEwo1wkBLf7kHH5Cw==}
-    peerDependencies:
-      vue: ^3.2.0
-    dependencies:
-      '@vue/devtools-api': 6.5.0
       vue: 3.3.4
     dev: false
 

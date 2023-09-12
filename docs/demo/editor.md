@@ -110,6 +110,9 @@ const handleListener = async ({ type, data }) => {
       break
   }
 }
+const checkFieldsForNewBadge = (field) => {
+  return field.type === 'subform'
+}
 </script>
 <ClientOnly>
   <el-dialog
@@ -129,6 +132,7 @@ const handleListener = async ({ type, data }) => {
   </el-dialog>
   <er-form-editor
     :layoutType="layoutType"
+    :checkFieldsForNewBadge="checkFieldsForNewBadge"
     :lang="lang"
     fileUploadURI="https://api.everright.site/api/file/uploads"
     @listener="handleListener"
@@ -157,5 +161,8 @@ const handleListener = async ({ type, data }) => {
 }
 .Everright-formEditor-Main__operation>div:first-child>i:first-child {
   display: none;
+}
+body {
+line-height: inherit;
 }
 </style>
