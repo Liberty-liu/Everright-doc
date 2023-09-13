@@ -19,9 +19,6 @@ hero:
       text: View on GitHub
       link: https://github.com/Liberty-liu/Everright-filter
     - theme: alt
-      text: View on Gitee
-      link: https://gitee.com/Liberty_liu/Everright-filter
-    - theme: alt
       text: Everright-filter-mobile
       link: /filter-mobile/introduction
 

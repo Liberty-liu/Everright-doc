@@ -266,27 +266,27 @@ erFormEditor component provides two modes for controlling the fields and layout 
 ## **3.API**
 
 ### **Attributes**
-| Name        |      Type      |  Description | Accepted Values |  Default |
-| :---- | :-- | :---- | :---- | :--------- |
-| `fieldsConfig`      | Array | Definition panel of fields| - | [(Default)](https://github.com/Liberty-liu/Everright-formEditor/blob/main/packages/formEditor/componentsConfig.js) |
-| `globalConfig`      | Object | Defining Form Configuration | - |[(Default)](https://github.com/Liberty-liu/Everright-formEditor/blob/main/packages/formEditor/componentsConfig.js) |
-| `lang` | String  | i18n | zh-cn\|en | zh-cn |
-| `layoutType` | Number  | Defining whether fields and layouts are separate | 1\|2 | 1 |
-| `fileUploadURI` | String  | Image and file upload URL | - | - |
-| `fieldsPanelWidth` | String  | Define the width of the `fieldsPanel`. | - | 220px |
-| `fieldsPanelDefaultOpeneds` | Array  | array that contains indexes of currently active sub-menus | - | <ClientOnly><el-tooltip content="['defaultField', 'field', 'container']" placement="bottom" effect="light"><el-button link><el-icon><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" data-v-ea893728=""><path fill="currentColor" d="M512 64a448 448 0 1 1 0 896 448 448 0 0 1 0-896zm0 832a384 384 0 0 0 0-768 384 384 0 0 0 0 768zm48-176a48 48 0 1 1-96 0 48 48 0 0 1 96 0zm-48-464a32 32 0 0 1 32 32v288a32 32 0 0 1-64 0V288a32 32 0 0 1 32-32z"></path></svg></el-icon></el-button></el-tooltip></ClientOnly> |
-| `configPanelWidth` | String  | Define the width of the `configPanel` | - | 320px |
-| `isShowCompleteButton` | Boolean  | Whether to display the option to configure the submit button in the form settings. | true\|false  | true |
-| `checkPropsBySelected` | function (selected, propType) {}  | Define which properties to display in the config panel | - | - |
-| `quickImages` | Array  | Define quick options for setting background images | <ClientOnly><el-tooltip content="['/public/Everright-logo.svg','/public/Everright-logo.svg','/public/Everright-logo.svg']" placement="bottom" effect="light"><el-button link><el-icon><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" data-v-ea893728=""><path fill="currentColor" d="M512 64a448 448 0 1 1 0 896 448 448 0 0 1 0-896zm0 832a384 384 0 0 0 0-768 384 384 0 0 0 0 768zm48-176a48 48 0 1 1-96 0 48 48 0 0 1 96 0zm-48-464a32 32 0 0 1 32 32v288a32 32 0 0 1-64 0V288a32 32 0 0 1 32-32z"></path></svg></el-icon></el-button></el-tooltip></ClientOnly> | [] |
-| `quickImageLimit` | Number  | The maximum number of uploaded images displayed in the shortcut panel | - | 5 |
-| `quickColors` |  Array | Defining shortcut options for setting background color | - | <ClientOnly><el-tooltip content="['/public/Everright-logo.svg','/public/Everright-logo.svg','/public/Everright-logo.svg']" placement="bottom" effect="light"><el-button link><el-icon><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" data-v-ea893728=""><path fill="currentColor" d="M512 64a448 448 0 1 1 0 896 448 448 0 0 1 0-896zm0 832a384 384 0 0 0 0-768 384 384 0 0 0 0 768zm48-176a48 48 0 1 1-96 0 48 48 0 0 1 96 0zm-48-464a32 32 0 0 1 32 32v288a32 32 0 0 1-64 0V288a32 32 0 0 1 32-32z"></path></svg></el-icon></el-button></el-tooltip></ClientOnly> |
-| `delHandle` | function (selected) {} return false  | Deletion interception function | - |- |
-| `copyHandle` | function (selected) {} return false  | Copy interception function | - |- |
-| `inlineMax` | Number  | Maximum number of items per row | - | 4 |
-| `isShowClear` | Boolean  | Whether to display the clear button | true\|false | true |
-| `isShowI18n` | Boolean  | Whether to display the i18n button | true\|false | true |
-| `checkFieldsForNewBadge` | function (field) {}   | Through the checkFieldsForNewBadge function, a new badge can be added to a certain element in the fields panel.   | true\|false |false |
+| Name                                                                  |      Type      |  Description | Accepted Values |  Default |
+|:----------------------------------------------------------------------| :-- | :---- | :---- | :--------- |
+| `fieldsConfig`                                                        | Array | Definition panel of fields| - | [(Default)](https://github.com/Liberty-liu/Everright-formEditor/blob/main/packages/formEditor/componentsConfig.js) |
+| `globalConfig`                                                        | Object | Defining Form Configuration | - |[(Default)](https://github.com/Liberty-liu/Everright-formEditor/blob/main/packages/formEditor/componentsConfig.js) |
+| `lang`                                                                | String  | i18n | zh-cn\|en | zh-cn |
+| `layoutType`                                                          | Number  | Defining whether fields and layouts are separate | 1\|2 | 1 |
+| `fileUploadURI`                                                       | String  | Image and file upload URL | - | - |
+| `fieldsPanelWidth`                                                    | String  | Define the width of the `fieldsPanel`. | - | 220px |
+| `fieldsPanelDefaultOpeneds`                                           | Array  | array that contains indexes of currently active sub-menus | - | <ClientOnly><el-tooltip content="['defaultField', 'field', 'container']" placement="bottom" effect="light"><el-button link><el-icon><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" data-v-ea893728=""><path fill="currentColor" d="M512 64a448 448 0 1 1 0 896 448 448 0 0 1 0-896zm0 832a384 384 0 0 0 0-768 384 384 0 0 0 0 768zm48-176a48 48 0 1 1-96 0 48 48 0 0 1 96 0zm-48-464a32 32 0 0 1 32 32v288a32 32 0 0 1-64 0V288a32 32 0 0 1 32-32z"></path></svg></el-icon></el-button></el-tooltip></ClientOnly> |
+| `configPanelWidth`                                                    | String  | Define the width of the `configPanel` | - | 320px |
+| `isShowCompleteButton`                                                | Boolean  | Whether to display the option to configure the submit button in the form settings. | true\|false  | true |
+| `checkPropsBySelected`                                                | function (selected, propType) {}  | Define which properties to display in the config panel | - | - |
+| `quickImages`                                                         | Array  | Define quick options for setting background images | <ClientOnly><el-tooltip content="['/public/Everright-logo.svg','/public/Everright-logo.svg','/public/Everright-logo.svg']" placement="bottom" effect="light"><el-button link><el-icon><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" data-v-ea893728=""><path fill="currentColor" d="M512 64a448 448 0 1 1 0 896 448 448 0 0 1 0-896zm0 832a384 384 0 0 0 0-768 384 384 0 0 0 0 768zm48-176a48 48 0 1 1-96 0 48 48 0 0 1 96 0zm-48-464a32 32 0 0 1 32 32v288a32 32 0 0 1-64 0V288a32 32 0 0 1 32-32z"></path></svg></el-icon></el-button></el-tooltip></ClientOnly> | [] |
+| `quickImageLimit`                                                     | Number  | The maximum number of uploaded images displayed in the shortcut panel | - | 5 |
+| `quickColors`                                                         |  Array | Defining shortcut options for setting background color | - | <ClientOnly><el-tooltip content="['/public/Everright-logo.svg','/public/Everright-logo.svg','/public/Everright-logo.svg']" placement="bottom" effect="light"><el-button link><el-icon><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" data-v-ea893728=""><path fill="currentColor" d="M512 64a448 448 0 1 1 0 896 448 448 0 0 1 0-896zm0 832a384 384 0 0 0 0-768 384 384 0 0 0 0 768zm48-176a48 48 0 1 1-96 0 48 48 0 0 1 96 0zm-48-464a32 32 0 0 1 32 32v288a32 32 0 0 1-64 0V288a32 32 0 0 1 32-32z"></path></svg></el-icon></el-button></el-tooltip></ClientOnly> |
+| `delHandle`                                                           | function (selected) {} return false  | Deletion interception function | - |- |
+| `copyHandle`                                                          | function (selected) {} return false  | Copy interception function | - |- |
+| `inlineMax`                                                           | Number  | Maximum number of items per row | - | 4 |
+| `isShowClear`                                                         | Boolean  | Whether to display the clear button | true\|false | true |
+| `isShowI18n`                                                          | Boolean  | Whether to display the i18n button | true\|false | true |
+| <el-badge value="new" class="item">`checkFieldsForNewBadge`</el-badge> | function (field) {}   | Through the checkFieldsForNewBadge function, a new badge can be added to a certain element in the fields panel.   | true\|false |false |
 
 ### **Slots**
 | Name  |      Description      |
