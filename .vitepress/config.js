@@ -120,10 +120,14 @@ const renderSidebar = (lang = 'zh-cn') => {
         text: isZh ? '容器' : 'Layout',
         collapsed: false,
         items: layouts.map((field) => {
-          return {
+          const result = {
             text: field,
             link: `${prefix}/formEditor/fields/${field.toLocaleLowerCase()}`
           }
+          if (field === 'subform') {
+            result.version = `v1.2.0`
+          }
+          return result
         })
       }
     ]
@@ -411,6 +415,12 @@ export default defineConfig({
           find: /^.*\/VPTeamMembersItem\.vue$/,
           replacement: fileURLToPath(
             new URL('./components/VPTeamMembersItem.vue', import.meta.url)
+          )
+        },
+        {
+          find: /^.*\/VPSidebarItem\.vue$/,
+          replacement: fileURLToPath(
+            new URL('./components/VPSidebarItem.vue', import.meta.url)
           )
         }
       ]
