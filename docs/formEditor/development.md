@@ -154,3 +154,8 @@ CREATE TABLE field (
 |  content  | 表单字段    |
 |  create_timestamp  | 创建时间    |
 |  update_timestamp  | 修改时间    |
+
+
+::: tip
+🎉如果这个项目对你有帮助或启发，可以的话欢迎给一个[star⭐️](https://github.com/Liberty-liu/Everright-formEditor).
+:::
