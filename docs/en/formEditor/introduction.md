@@ -38,10 +38,24 @@ features:
     details: Provide real-time preview of internal data structure, development environment with back-end service (SQLite)
 ---
 
+<div class="contributors">
+  <h2><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Clapping%20Hands.png" alt="Clapping Hands" width="25" height="25" />This repo exists thanks to all the people who contributed.</h2>
+  <a href="https://github.com/Liberty-liu/Everright-formEditor/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=Liberty-liu/Everright-formEditor" />
+  </a>
+</div>
 
-<script setup>
-import { useData, useRoute, useRouter } from 'vitepress'
-const {
-  lang
-} = useData()
-</script>
+<style lang="scss" scoped>
+.contributors {
+  text-align:center;
+  h2 {
+    padding: 32px;
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  a,img {
+    display: inline-block;
+  }
+}
+</style>
