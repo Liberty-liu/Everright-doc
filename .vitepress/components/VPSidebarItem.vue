@@ -65,7 +65,7 @@ function onCaretClick() {
 
       <VPLink v-if="item.link" :tag="linkTag" class="link" :href="item.link">
         <component :is="textTag" class="text" v-html="item.text" />
-        <el-tag v-if="item.version" type="plain" round>{{ item.version }}</el-tag>
+        <el-tag v-if="item.version" effect="plain" round>{{ item.version }}</el-tag>
       </VPLink>
       <component v-else :is="textTag" class="text" v-html="item.text" />
 
