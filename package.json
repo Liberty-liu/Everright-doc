@@ -19,7 +19,7 @@
     "ace-builds": "^1.16.0",
     "element-plus": "^2.3.2",
     "everright-filter": "^1.1.1",
-    "everright-formeditor": "^1.2.1",
+    "everright-formeditor": "^1.2.2",
     "lodash-es": "^4.17.21",
     "query-string": "^8.1.0",
     "sass": "^1.61.0",
