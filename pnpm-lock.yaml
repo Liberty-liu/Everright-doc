@@ -5,7 +5,7 @@ specifiers:
   autoprefixer: ^10.4.14
   element-plus: ^2.3.2
   everright-filter: ^1.1.1
-  everright-formeditor: ^1.2.2
+  everright-formeditor: ^1.2.3
   flexsearch: ^0.7.31
   lodash-es: ^4.17.21
   markdown-it: ^13.0.1
@@ -20,7 +20,7 @@ dependencies:
   ace-builds: 1.16.0
   element-plus: 2.3.2_vue@3.3.4
   everright-filter: 1.1.1_qw2uepif34ifeagihpzqryubwm
-  everright-formeditor: 1.2.2_bofmn2qmx6xnm7pjj6sszp5mgq
+  everright-formeditor: 1.2.3_bofmn2qmx6xnm7pjj6sszp5mgq
   lodash-es: 4.17.21
   query-string: 8.1.0
   sass: 1.61.0
@@ -1173,8 +1173,8 @@ packages:
       - debug
     dev: false
 
-  /everright-formeditor/1.2.2_bofmn2qmx6xnm7pjj6sszp5mgq:
-    resolution: {integrity: sha512-h0zS7ST92e3IxPc86iZDf4eyNu7NuGcS4AhNITYXFYPZTZhZkutuSKD7J0AqOXRZCCyJud2XMlVRKLAyjC83wQ==}
+  /everright-formeditor/1.2.3_bofmn2qmx6xnm7pjj6sszp5mgq:
+    resolution: {integrity: sha512-CeSPkD5cK3foRipMd/jxj/oDkZPdM/O2Roa2fogxrBlsWAFkU2N+mz/Vg69NCTifdMv9UI0LutcYZ0ctvB3hrw==}
     peerDependencies:
       element-plus: ^2.2.28
       vant: ^4.0.8
